@@ -1,13 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.text-gradient {
+  background: conic-gradient(
+    from 52.45deg at 62.29% 32.17%,
+    #1a5a96 -35.36deg,
+    #52c29a 32.42deg,
+    #1a5a96 324.64deg,
+    #52c29a 392.42deg
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+/* background: linear-gradient(to bottom right, #1a5a96, #52c29a); */
+.btn {
+  /* padding: 20px 20px; */
+  border: none;
+  outline: none;
+  position: relative;
+  z-index: 1;
+  border-radius: 5px;
+  background: linear-gradient(to bottom right, #1a5a96, #52c29a);
+  cursor: pointer;
+  border-bottom-right-radius: 20px;
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 1px;
+  right: 1px;
+  top: 1px;
+  bottom: 1px;
+  border-radius: 4px;
+  background-color: white;
+  z-index: -1;
+  transition: 200ms;
+  border-bottom-right-radius: 20px;
+}
+.btn::after {
+  content: attr(data);
+  font-size: 16px;
+  background: linear-gradient(to bottom right, #1a5a96, #52c29a);
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: 200ms;
 }
