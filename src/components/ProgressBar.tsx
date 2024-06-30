@@ -50,7 +50,7 @@ const ProgressBars: React.FC = () => {
 
   return (
     <section className="">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto md:px-4">
         <div className="space-y-4">
           {progressData.map((progress, index) => (
             <ProgressBar

@@ -35,9 +35,9 @@ const ImageComponent: React.FC = () => {
                 className="rounded-full w-full h-full object-cover hover:scale-105"
             />
 
-            <StarRating />
+            {/* <StarRating />
             <Experience />
-            <ProjectSummary />
+            <ProjectSummary /> */}
         </div>)
 }
 

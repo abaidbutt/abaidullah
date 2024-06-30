@@ -29,7 +29,7 @@ const Header: React.FC = () => {
   return (
     <nav className="dark:bg-black dark:text-white bg-white text-black px-4 py-3 static w-full">
       <div className="container mx-auto flex justify-between items-center">
-        <div className="text-2xl font-bold">AB</div>
+        <div className="text-2xl font-bold bg-black text-white rounded-full p-2 dark:bg-white dark:text-black">AB</div>
         <div className="md:hidden" onClick={toggleMobileMenu}>
           {isMobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
         </div>
