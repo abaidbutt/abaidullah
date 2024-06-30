@@ -42,35 +42,35 @@ const Contact: React.FC = () => {
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-5">
         <div className=" flex flex-col justify-center space-y-6 mt-8 md:mt-0 md:pl-8">
           <div className="flex items-center space-x-2">
-            <div className='bg-[#898989] rounded shadow p-2'>
-              <FaMapMarkerAlt size={24} className="text-white" />
+            <div className='bg-black dark:bg-white rounded shadow p-2'>
+              <FaMapMarkerAlt size={24} className="text-white dark:text-black" />
             </div>
             <a href="https://www.google.com/maps/search/?api=1&query=Lahore%2C+Punjab%2C+Pakistan" target="_blank" rel="noopener noreferrer" className="text-lg">
               Lahore, Punjab, Pakistan
             </a>
           </div>
           <div className="flex items-center space-x-2">
-            <div className='bg-[#898989] rounded shadow p-2'>
-              <FaPhone size={24} className="text-white" />
+            <div className='bg-black dark:bg-white rounded shadow p-2'>
+              <FaPhone size={24} className="text-white dark:text-black" />
             </div>
             <a href="tel:+923111715499" className="text-lg">+92 (311) 171-5499</a>
           </div>
           <div className="flex items-center space-x-2">
-            <div className='bg-[#898989] rounded shadow p-2'>
-              <FaEnvelope size={24} className="text-white" />
+            <div className='bg-black dark:bg-white rounded shadow p-2'>
+              <FaEnvelope size={24} className="text-white dark:text-black" />
             </div>
             <a href="mailto:bestabaidullahbutt@gmail.com" className="text-lg">bestabaidullahbutt@gmail.com</a>
           </div>
           <div className="flex items-center space-x-2">
-            <div className='bg-[#898989] rounded shadow p-2'>
+            <div className='bg-black dark:bg-white rounded shadow p-2'>
 
-              <FaGithub size={24} className="text-white" />
+              <FaGithub size={24} className="text-white dark:text-black" />
             </div>
             <a href="https://github.com/abaidbutt" className="text-lg hover:text-blue-400">github.com/abaidbutt</a>
           </div>
           <div className="flex items-center space-x-2">
-            <div className='bg-[#898989] rounded shadow p-2'>
-              <TbClockHour4 size={24} className="text-white" />
+            <div className='bg-black dark:bg-white rounded shadow p-2'>
+              <TbClockHour4 size={24} className="text-white dark:text-black" />
             </div>
             <a href="https://github.com/abaidbutt" className="text-lg hover:text-blue-400">
 
