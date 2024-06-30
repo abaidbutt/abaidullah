@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const skills = [
+    "JavaScript",
+    "Typescript",
     "React.js",
     "Next.js",
     "React Native",
@@ -15,7 +17,7 @@ const skills = [
     "EC2", 
     "S3",
     "Lambda",
-    "API Gateway",
+    "Elastic BeanStalk",
     "Amplify",
     "DynamoDB",
     "Prisma",
@@ -33,10 +35,10 @@ const skills = [
 
 const Skills: React.FC = () => {
     return (
-        <section id="skills" className="py-10 bg-gray-100">
+        <section id="skills" className="py-10 dark:bg-black bg-white text-black dark:text-white">
             <div className="container mx-auto px-4">
-                <h2 className="text-3xl font-bold mb-4 text-center text-gradient">MY SKILLS</h2>
-                <p className="text-center mb-8">4+ years hands of experience on these skills set</p>
+                <h2 className="md:text-4xl text-2xl font-bold mb-4 text-center ">MY SKILLS</h2>
+                <p className="text-center mb-8 text-md md:text-lg">4+ years hands of experience on these skills set</p>
                 <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
                     {skills.map((skill, index) => (
                         <motion.div
@@ -45,7 +47,7 @@ const Skills: React.FC = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             whileHover={{ scale: 1.05 }}
-                            className="bg-white p-6 rounded-lg shadow-md text-center hover:scale-105 transition duration-100"
+                            className="dark:bg-white bg-black dark:text-black text-white p-6 rounded-lg shadow-md text-center hover:scale-105 transition duration-100"
                         >
                             <h3 className="text-xl font-semibold">{skill}</h3>
                         </motion.div>

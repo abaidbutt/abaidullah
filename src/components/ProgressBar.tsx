@@ -28,9 +28,9 @@ const ProgressBar: React.FC<ProgressBarProps> = ({ label, percentage }) => {
       <p className="flex justify-between">
         {label} <span>{width}%</span>
       </p>
-      <div className="bg-gray-700 h-4 rounded-full overflow-hidden">
+      <div className="bg-gray-300 dark:bg-gray-600 h-4 rounded-full overflow-hidden">
         <div
-          className="bg-blue-500 h-full"
+          className="bg-black dark:bg-white h-full"
           style={{ width: `${width}%` }}
         ></div>
       </div>

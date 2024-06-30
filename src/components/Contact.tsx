@@ -36,31 +36,30 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-10 bg-gray-100 text-gray-800 relative overflow-hidden">
-      <h2 className="text-3xl font-bold mb-4 text-center text-gradient">Let's connect</h2>
-      <p className="text-xl font-bold mb-4 text-center">Contact me today to schedule a consultation</p>
+    <section id="contact" className="py-10 dark:bg-black dark:text-white bg-white text-black relative overflow-hidden">
+      <h2 className="md:text-4xl text-2xl font-bold mb-4 text-center">Let's connect</h2>
+      <p className="text-md md:text-lg mb-4 text-center">Contact me today to schedule a consultation</p>
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-5">
         <div className=" flex flex-col justify-center space-y-6 mt-8 md:mt-0 md:pl-8">
           <div className="flex items-center space-x-2">
             <div className='bg-[#898989] rounded shadow p-2'>
-
               <FaMapMarkerAlt size={24} className="text-white" />
             </div>
-            <p className="text-lg">Lahore, Punjab, Pakistan</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Lahore%2C+Punjab%2C+Pakistan" target="_blank" rel="noopener noreferrer" className="text-lg">
+              Lahore, Punjab, Pakistan
+            </a>
           </div>
           <div className="flex items-center space-x-2">
             <div className='bg-[#898989] rounded shadow p-2'>
-
               <FaPhone size={24} className="text-white" />
             </div>
-            <p className="text-lg">+92 (311) 171-5499</p>
+            <a href="tel:+923111715499" className="text-lg">+92 (311) 171-5499</a>
           </div>
           <div className="flex items-center space-x-2">
             <div className='bg-[#898989] rounded shadow p-2'>
-
               <FaEnvelope size={24} className="text-white" />
             </div>
-            <p className="text-lg">bestabaidullahbutt@gmail.com</p>
+            <a href="mailto:bestabaidullahbutt@gmail.com" className="text-lg">bestabaidullahbutt@gmail.com</a>
           </div>
           <div className="flex items-center space-x-2">
             <div className='bg-[#898989] rounded shadow p-2'>

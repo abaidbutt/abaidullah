@@ -6,11 +6,11 @@ const skills = ["React.js", "Next.js", "React Native", "NestJS", "Express.js"];
 
 const About: React.FC = () => {
   return (
-    <section id="about" className="py-16 text-gray-800 bg-gray-100">
+    <section id="about" className="py-16 dark:bg-black dark:text-white bg-white text-black">
       <div className="container mx-auto p-5">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-extrabold mb-4 text-gradient">About Me</h2>
-          <p className="text-lg text-gray-600">Crafting innovative solutions with cutting-edge technologies</p>
+          <h2 className="md:text-4xl text-2xl font-extrabold mb-4">About Me</h2>
+          <p className="text-md md:text-lg">Crafting innovative solutions with cutting-edge technologies</p>
         </div>
         <div className="md:grid md:grid-cols-2 md:gap-8">
           <div className='space-y-6'>

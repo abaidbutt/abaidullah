@@ -30,16 +30,18 @@ const projects = [
 
 const Projects: React.FC = () => {
   return (
-    <section id="projects" className="py-10 bg-gray-100 text-gray-800">
+    <section id="projects" className="py-10 dark:bg-black dark:text-white bg-white text-black">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-4 text-center text-gradient">PROJECTS</h2>
+        <h2 className="md:text-4xl text-2xl font-bold mb-4 text-center">PROJECTS</h2>
+        <p className="text-center mb-8 text-md md:text-lg">More than 25 projects has been develop and publish </p>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
-              key={index} className="bg-white p-4 rounded shadow hover:scale-105 transition duration-100">
+              key={index} className="dark:bg-white bg-black dark:text-black text-white p-4 rounded shadow hover:scale-105 transition duration-100">
               <img src={project.image} alt={project.title} className="w-full h-48 object-cover rounded" />
               <h3 className="text-xl font-semibold mt-4">{project.title}</h3>
               <p className="mt-2">{project.description}</p>

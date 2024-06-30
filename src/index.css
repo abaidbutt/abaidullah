@@ -21,11 +21,11 @@ code {
 
 .text-gradient {
   background: conic-gradient(
-    from 52.45deg at 62.29% 32.17%,
-    #1a5a96 -35.36deg,
-    #52c29a 32.42deg,
-    #1a5a96 324.64deg,
-    #52c29a 392.42deg
+    from 90.45deg at 62.29% 32.17%,
+    #000 -35.36deg,
+    #fbfdfc 32.42deg,
+    #000 324.64deg,
+    #fbfdfc 392.42deg
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
