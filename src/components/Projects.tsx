@@ -5,7 +5,7 @@ import { FiExternalLink, FiGithub } from 'react-icons/fi';
 const projects = [
   {
     title: "Gulf Job 360",
-    description: "Created a platform that connects users for job opportunities, enhancing collaboration and distribution in the job market",
+    description: "Developed a platform for job hunting for job opportunities, enhancing collaboration and distribution in the job market",
     image: "/path/to/image.png" // Replace with the actual path to your image
   },
   {
@@ -15,7 +15,7 @@ const projects = [
   },
   {
     title: "Yougoz",
-    description: "Service booking app for beauty salons, gyms and fitness centers. Charged from service provider based on subscription and invoiceing model/",
+    description: "Service booking app for beauty salons, gyms, and fitness centers. Charged from service provider based on subscription and invoiceing model",
     image: "/path/to/image.png"
   },
   {
@@ -25,17 +25,17 @@ const projects = [
   },
   {
     title: "Shield",
-    description: "Built the Shield App with React Native, Node.js, and MongoDB, focusing on enhancing user experience through Express.js APIs",
+    description: "Built the Shield App with React Native, Node.js, and MongoDB, focusing on enhancing employee attendance experience through Express.js APIs",
     image: "/path/to/image.png" // Replace with the actual path to your image
   },
   {
     title: "Boost Summit Crew",
-    description: "Analytics dashboard for Google Analytics, subscription model using Stripe, chat app, and task management (ERP system).",
+    description: "Analytics dashboard of Google Analytics, subscription model using Stripe, chat app, and task management",
     link: "https://boost.summitcrew.com"
   },
   {
     title: "Town Town",
-    description: "Develop a user-friendly app for local community events, dining, entertainment, and services",
+    description: "Develop a user-friendly app for local community events, dining, entertainment, news, and services",
     image: "/path/to/image.png" // Replace with the actual path to your image
   },
 
@@ -59,18 +59,18 @@ const projects = [
   },
   {
     title: "TactLink",
-    description: "Social network app for managing user contacts, friendships, and data sharing.",
+    description: "Designed and Integrate Apis for a Social network app for managing user contacts, friendships, and data sharing.",
     image: "/mnt/data/image.png"
   },
   {
     title: "Agro Finance",
-    description: "Helps farmers manage their yearly finances and operations efficiently.",
+    description: "Developed a Mobile App that Helps farmers manage their yearly finances and operations efficiently.",
     image: "/mnt/data/image.png"
   },
 
   {
     title: "Royce Lighting",
-    description: "Platform for advertising and selling lighting products, allowing user contact.",
+    description: "Platform for advertising and selling lighting products, allowing user engagment.",
     image: "/mnt/data/image.png"
   },
   {
@@ -85,7 +85,7 @@ const projects = [
   },
   {
     title: "Movers One",
-    description: "Bus ticket booking app where users can select routes and timings.",
+    description: "Bus ticket booking app, users can select bus and timings.",
     link: "https://movers-one.vercel.app"
   },
   {
@@ -95,12 +95,12 @@ const projects = [
   },
   {
     title: "The News",
-    description: "Provides daily news updates and related information.",
+    description: "Provides daily news updates and articles related information.",
     image: "/mnt/data/image.png"
   },
   {
     title: "The Chenab Club",
-    description: "Manages club memberships and activities for members.",
+    description: "Manages club memberships and activities of members.",
     image: "/mnt/data/image.png"
   },
   {
@@ -231,8 +231,12 @@ const uiUxProjects = [
     link: "https://faang-investing.vercel.app/"
   },
   {
-    title: "Code Automation",
-    link: "https://codeautomation.vercel.app/"
-  }
+    title: "Analytics Dashboard",
+    link: "https://analytics-dashboard-bice.vercel.app/"
+  },
+  {
+    title: "Tattoo Gallery",
+    link: "https://tattoo-gallery-one.vercel.app/"
+  },
 ];
 

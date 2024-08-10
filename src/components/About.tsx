@@ -9,7 +9,7 @@ const About: React.FC = () => {
     <section id="about" className="py-16 dark:bg-black dark:text-white bg-white text-black">
       <div className="container mx-auto p-3">
         <div className="text-center mb-12">
-          <h2 className="md:text-4xl text-2xl font-extrabold mb-4">About Me</h2>
+          <h2 className="md:text-4xl text-2xl font-extrabold mb-4">Journey</h2>
           <p className="text-md md:text-lg">Crafting innovative solutions with cutting-edge technologies</p>
         </div>
         <div className="md:grid md:grid-cols-2 md:gap-8">
@@ -21,7 +21,8 @@ const About: React.FC = () => {
               className=""
             >
               <p className="text-lg">
-                I am a software developer skilled in full-stack web app development, proficient in React.js, Next.js, React Native, and Node.js. My expertise lies in developing robust and dynamic applications that deliver exceptional results.
+                I graduated in 2020 and began learning web development during my studies. I started my career as a React.js developer and later transitioned to a MERN Stack Developer role.
+
               </p>
             </motion.div>
             <motion.div
@@ -31,7 +32,8 @@ const About: React.FC = () => {
               className=""
             >
               <p className="text-lg">
-                My skill set includes efficiently managing APIs and data with Firebase, MongoDB, and MySQL. I have expertise in integrating payment methods for subscriptions and invoices and implementing Twilio, Stripe, and OpenAI APIs.
+                I am a full-stack developer expertise with MERN Stack technologies,  proficient in React.js, Next.js, React Native, and Node.js.
+                My skill set includes efficiently managing APIs and data with Firebase, MongoDB, and MySQL.
               </p>
             </motion.div>
             <motion.div
@@ -41,7 +43,9 @@ const About: React.FC = () => {
               className=""
             >
               <p className="text-lg">
-                I aim to use my skills and experience to develop innovative solutions and deliver exceptional results. If you're looking for a developer, let's collaborate and turn your vision into reality!
+
+                I have expertise in integrating payment methods for subscriptions and invoices with Stripe.
+                I have experience with Docker, AWS EC2, auto-scaling with load balancers, and GitHub Actions for CI/CD pipelines with ECR and ECS.
               </p>
             </motion.div>
           </div>
