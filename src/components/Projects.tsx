@@ -1,242 +1,425 @@
 import React from 'react';
 import { motion } from "framer-motion"
 import { FiExternalLink, FiGithub } from 'react-icons/fi';
+import { FaMobile, FaGlobe, FaBrain, FaRobot, FaPython, FaReact, FaAws } from 'react-icons/fa';
+import { SiDjango, SiFastapi, SiFlask, SiReact, SiNodedotjs } from 'react-icons/si';
 
-const projects = [
+// React Native Projects
+const reactNativeProjects = [
   {
-    title: "Gulf Job 360",
-    description: "Developed a platform for job hunting for job opportunities, enhancing collaboration and distribution in the job market",
-    image: "/path/to/image.png" // Replace with the actual path to your image
+    title: "Tactlink Mobile App",
+    description: "Social network app for managing user contacts, friendships, and data sharing with real-time messaging.",
+    techStack: ["React Native", "Node.js", "MongoDB", "Socket.io"],
+    role: "Full-Stack Developer",
+    category: "Social Network"
   },
   {
-    title: "Keventer & Nizam",
-    description: "Developed a mobile app for Keventers to improve food pickup. Used Redux for state management and React.js for an efficient admin panel",
-    image: "/path/to/image.png" // Replace with the actual path to your image
+    title: "Royce Lighting Mobile App",
+    description: "Platform for advertising and selling lighting products with AR visualization and user engagement features.",
+    techStack: ["React Native", "Firebase", "AR Kit", "Stripe"],
+    role: "Mobile Developer",
+    category: "E-commerce"
+  },
+  {
+    title: "Poolgrab App",
+    description: "Ride-sharing app with Google Maps integration, real-time tracking, and payment processing.",
+    techStack: ["React Native", "Google Maps API", "Firebase", "Stripe"],
+    role: "Frontend Developer",
+    category: "Transportation"
+  },
+  {
+    title: "Agro Finance",
+    description: "Mobile app helping farmers manage yearly finances, crop planning, and agricultural operations efficiently.",
+    techStack: ["React Native", "SQLite", "Chart.js", "Push Notifications"],
+    role: "Full-Stack Developer",
+    category: "Agriculture"
+  },
+  {
+    title: "Shield App",
+    description: "Employee security and attendance tracking app with biometric authentication and real-time monitoring.",
+    techStack: ["React Native", "Node.js", "MongoDB", "Biometric API"],
+    role: "Full-Stack Developer",
+    category: "Security"
+  },
+  {
+    title: "Keventers / Nizams",
+    description: "Food delivery apps with order tracking, payment integration, and real-time delivery updates.",
+    techStack: ["React Native", "Redux", "Node.js", "Stripe", "Google Maps"],
+    role: "Mobile Developer",
+    category: "Food Delivery"
+  },
+  {
+    title: "Vlore App",
+    description: "NFC management system for contactless payments, access control, and digital identity verification.",
+    techStack: ["React Native", "NFC API", "Blockchain", "Encryption"],
+    role: "Mobile Developer",
+    category: "Fintech"
+  },
+  {
+    title: "Chit Fund App (Fuboot)",
+    description: "User-friendly chit fund management app for creating and managing monthly chit funds with friends.",
+    techStack: ["React Native", "Firebase", "Payment Gateway", "Analytics"],
+    role: "Full-Stack Developer",
+    category: "Finance"
+  },
+  {
+    title: "The Chenab Club",
+    description: "Club membership management app with event booking, member directory, and facility reservations.",
+    techStack: ["React Native", "Node.js", "MySQL", "Calendar API"],
+    role: "Full-Stack Developer",
+    category: "Membership"
+  }
+];
+
+// Web & Full-Stack Projects
+const webProjects = [
+  {
+    title: "Gulf Job 360",
+    description: "Comprehensive job hunting platform with AI-powered matching, resume builder, and employer dashboard.",
+    techStack: ["React.js", "Node.js", "MongoDB", "AI/ML", "Elasticsearch"],
+    role: "Full-Stack Developer",
+    category: "Job Portal",
+    link: "https://gulfjob360.com"
   },
   {
     title: "Yougoz",
-    description: "Service booking app for beauty salons, gyms, and fitness centers. Charged from service provider based on subscription and invoiceing model",
-    image: "/path/to/image.png"
-  },
-  {
-    title: "PoolGrab",
-    description: "Contributed to the app by managing data storage, integrating Google Maps, and designing the user interface",
-    image: "/path/to/image.png" // Replace with the actual path to your image
-  },
-  {
-    title: "Shield",
-    description: "Built the Shield App with React Native, Node.js, and MongoDB, focusing on enhancing employee attendance experience through Express.js APIs",
-    image: "/path/to/image.png" // Replace with the actual path to your image
+    description: "Service booking platform for beauty salons, gyms, and fitness centers with subscription-based revenue model.",
+    techStack: ["React.js", "Node.js", "Stripe", "Calendar API", "SMS API"],
+    role: "Full-Stack Developer",
+    category: "Service Booking"
   },
   {
     title: "Boost Summit Crew",
-    description: "Analytics dashboard of Google Analytics, subscription model using Stripe, chat app, and task management",
+    description: "Analytics dashboard with Google Analytics integration, subscription model, chat app, and task management.",
+    techStack: ["React.js", "Node.js", "Google Analytics API", "Stripe", "WebSocket"],
+    role: "Full-Stack Developer",
+    category: "Analytics",
     link: "https://boost.summitcrew.com"
   },
   {
     title: "Town Town",
-    description: "Develop a user-friendly app for local community events, dining, entertainment, news, and services",
-    image: "/path/to/image.png" // Replace with the actual path to your image
+    description: "Local community platform for events, dining, entertainment, news, and local services discovery.",
+    techStack: ["React.js", "Node.js", "MongoDB", "Google Maps", "Push Notifications"],
+    role: "Full-Stack Developer",
+    category: "Community"
   },
-
-  {
-    title: "Fuboot",
-    description: "User-friendly chit fund management app for creating and managing monthly chit funds with friends.",
-    image: "/mnt/data/image.png"
-  },
-
   {
     title: "Myron App",
-    description: "E-commerce app with Firebase, React.js, and blog features. checkout with stripe and order tracking",
-    image: "/path/to/image.png"
+    description: "E-commerce platform with Firebase integration, blog features, Stripe checkout, and order tracking.",
+    techStack: ["React.js", "Firebase", "Stripe", "Blog CMS", "Analytics"],
+    role: "Full-Stack Developer",
+    category: "E-commerce"
   },
-
-
   {
     title: "AR Face App",
-    description: "Augmented reality app for video effects like glasses, necklaces, masks, and earrings.",
+    description: "Augmented reality web app for video effects including glasses, necklaces, masks, and earrings.",
+    techStack: ["React.js", "WebRTC", "AR.js", "TensorFlow.js", "WebGL"],
+    role: "Frontend Developer",
+    category: "AR/VR",
     link: "https://arapp-one.vercel.app/"
   },
   {
-    title: "TactLink",
-    description: "Designed and Integrate Apis for a Social network app for managing user contacts, friendships, and data sharing.",
-    image: "/mnt/data/image.png"
-  },
-  {
-    title: "Agro Finance",
-    description: "Developed a Mobile App that Helps farmers manage their yearly finances and operations efficiently.",
-    image: "/mnt/data/image.png"
-  },
-
-  {
-    title: "Royce Lighting",
-    description: "Platform for advertising and selling lighting products, allowing user engagment.",
-    image: "/mnt/data/image.png"
-  },
-  {
-    title: "Bonik Commerce",
-    description: "E-commerce app with categories, checkout, and product management.",
-    image: "/path/to/image.png"
-  },
-  {
     title: "Circul8",
-    description: "Job recruiting app like LinkedIn for connecting people and companies.",
+    description: "Professional networking platform similar to LinkedIn for connecting professionals and companies.",
+    techStack: ["React.js", "Node.js", "MongoDB", "Elasticsearch", "Email API"],
+    role: "Full-Stack Developer",
+    category: "Networking",
     link: "https://circul8.me"
   },
   {
     title: "Movers One",
-    description: "Bus ticket booking app, users can select bus and timings.",
+    description: "Bus ticket booking platform with route selection, seat booking, and payment processing.",
+    techStack: ["React.js", "Node.js", "Payment Gateway", "Google Maps", "SMS"],
+    role: "Full-Stack Developer",
+    category: "Transportation",
     link: "https://movers-one.vercel.app"
   },
   {
     title: "Infinite Tech",
-    description: "Call center data management app. Integrated with Salesforce.",
-    image: "/path/to/image.png"
-  },
-  {
-    title: "The News",
-    description: "Provides daily news updates and articles related information.",
-    image: "/mnt/data/image.png"
-  },
-  {
-    title: "The Chenab Club",
-    description: "Manages club memberships and activities of members.",
-    image: "/mnt/data/image.png"
+    description: "Call center data management system with Salesforce integration and performance analytics.",
+    techStack: ["React.js", "Salesforce API", "Node.js", "Analytics", "CRM"],
+    role: "Full-Stack Developer",
+    category: "CRM"
   },
   {
     title: "SPS Fulfillment",
-    description: "E-commerce app on React.js with Firebase checkout.",
+    description: "E-commerce fulfillment platform with inventory management and Firebase-powered checkout system.",
+    techStack: ["React.js", "Firebase", "Inventory API", "Stripe", "Analytics"],
+    role: "Full-Stack Developer",
+    category: "E-commerce",
     link: "https://spsfulfillment.com/"
-  },
-
-
+  }
 ];
 
-const Projects: React.FC = () => {
-  return (
-    <section id="projects" className="py-10 dark:bg-black dark:text-white bg-white text-black">
-      <div className="container mx-auto px-4">
-        <h2 className="md:text-4xl text-2xl font-bold mb-4 text-center">PROJECTS</h2>
-        <p className="text-center mb-8 text-md md:text-lg">More than 25 projects has been develop and published </p>
+// AI/ML Projects
+const aiMlProjects = [
+  {
+    title: "Intelligent Chatbot Platform",
+    description: "Advanced chatbot system with NLP, context awareness, and multi-language support for customer service.",
+    techStack: ["Python", "FastAPI", "OpenAI API", "LangChain", "PostgreSQL"],
+    role: "AI/ML Engineer",
+    category: "Conversational AI"
+  },
+  {
+    title: "RAG Document Assistant",
+    description: "Retrieval-Augmented Generation system for intelligent document querying and knowledge extraction.",
+    techStack: ["Python", "LangChain", "ChromaDB", "OpenAI", "Streamlit"],
+    role: "AI/ML Engineer",
+    category: "Knowledge Management"
+  },
+  {
+    title: "Voice Agent System",
+    description: "AI-powered voice agents for automated customer support with speech-to-text and text-to-speech.",
+    techStack: ["Python", "Whisper API", "ElevenLabs", "FastAPI", "WebSocket"],
+    role: "AI/ML Engineer",
+    category: "Voice AI"
+  },
+  {
+    title: "n8n Workflow Automation",
+    description: "Complex workflow automation system integrating multiple APIs and services for business process optimization.",
+    techStack: ["n8n", "Python", "REST APIs", "Webhooks", "Database"],
+    role: "Automation Engineer",
+    category: "Process Automation"
+  },
+  {
+    title: "Model Fine-tuning Pipeline",
+    description: "Custom model fine-tuning pipeline for domain-specific AI applications with performance monitoring.",
+    techStack: ["Python", "Transformers", "PyTorch", "MLflow", "Docker"],
+    role: "ML Engineer",
+    category: "Model Training"
+  },
+  {
+    title: "Agentic AI System",
+    description: "Multi-agent AI system capable of autonomous task execution and decision-making processes.",
+    techStack: ["Python", "LangGraph", "OpenAI", "Redis", "FastAPI"],
+    role: "AI Engineer",
+    category: "Autonomous AI"
+  }
+];
 
-        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 md:gap-6 gap-3">
-          {projects.map((project, index) => (
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-              key={index} className="dark:bg-white bg-black dark:text-black text-white md:p-4 p-2 rounded shadow hover:scale-105 transition duration-100">
-              {/* <img src={project.image} alt={project.title} className="w-full h-48 object-cover rounded" /> */}
-              <h3 className="text-xl font-semibold mt-4">{project.title}</h3>
-              <p className="mt-2">{project.description}</p>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-      <ProjectsGrid />
+const ProjectCard: React.FC<{
+  project: any;
+  index: number;
+  icon: React.ReactNode;
+  gradient: string;
+}> = ({ project, index, icon, gradient }) => {
+  const getTechIcon = (tech: string) => {
+    const iconMap: { [key: string]: React.ReactNode } = {
+      'React.js': <SiReact className="text-blue-500" />,
+      'React Native': <FaMobile className="text-blue-600" />,
+      'Node.js': <SiNodedotjs className="text-green-600" />,
+      'Python': <FaPython className="text-yellow-500" />,
+      'FastAPI': <SiFastapi className="text-green-500" />,
+      'Django': <SiDjango className="text-green-700" />,
+      'Flask': <SiFlask className="text-gray-600" />,
+      'AWS': <FaAws className="text-orange-500" />,
+    };
+    return iconMap[tech] || <span className="w-2 h-2 bg-gray-400 rounded-full" />;
+  };
 
-    </section>
-  );
-};
-
-const ProjectCard = ({ project }: { project: { title: string, link: string, github?: string } }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="dark:bg-gray-800 bg-white dark:text-white text-gray-800 md:p-6 p-3 rounded-lg shadow-lg hover:shadow-xl transform transition-transform duration-200 hover:scale-105"
+      transition={{ duration: 0.6, delay: index * 0.1 }}
+      whileHover={{ scale: 1.02, y: -5 }}
+      className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700"
     >
-      <div className="p-4 flex  items-center justify-between gap-4">
-        <h3 className="text-xl font-bold">{project.title}</h3>
-        <div className="inline-flex items-center ">
-          <a
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-500 underline hover:text-blue-700 transition-colors"
-          >
-            <FiExternalLink className="ml-1" size={25} color='white' />
-          </a>
-          {project.github && (
+      <div className={`h-2 bg-gradient-to-r ${gradient}`} />
+      <div className="p-6">
+        <div className="flex items-center justify-between mb-4">
+          <div className={`p-3 rounded-xl bg-gradient-to-r ${gradient} text-white`}>
+            {icon}
+          </div>
+          <span className="text-xs font-medium px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-gray-600 dark:text-gray-300">
+            {project.category}
+          </span>
+        </div>
+        
+        <h3 className="text-xl font-bold mb-3 text-gray-800 dark:text-white">
+          {project.title}
+        </h3>
+        
+        <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm leading-relaxed">
+          {project.description}
+        </p>
+        
+        <div className="mb-4">
+          <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2">TECH STACK</p>
+          <div className="flex flex-wrap gap-2">
+            {project.techStack.map((tech: string, techIndex: number) => (
+              <div
+                key={techIndex}
+                className="flex items-center space-x-1 px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded-lg text-xs"
+              >
+                {getTechIcon(tech)}
+                <span className="text-gray-700 dark:text-gray-300">{tech}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        
+        <div className="flex items-center justify-between">
+          <div>
+            <p className="text-xs font-semibold text-gray-500 dark:text-gray-400">ROLE</p>
+            <p className="text-sm font-medium text-gray-700 dark:text-gray-300">{project.role}</p>
+          </div>
+          {project.link && (
             <a
-              href={project.github}
+              href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-700 underline hover:text-gray-900 transition-colors"
+              className="flex items-center space-x-1 text-blue-600 hover:text-blue-800 transition-colors"
             >
-              <FiGithub className="ml-1" size={25} color='white' />
+              <FiExternalLink size={16} />
+              <span className="text-sm">View</span>
             </a>
           )}
-
         </div>
       </div>
     </motion.div>
   );
 };
 
-
-
-const ProjectsGrid = () => {
+const Projects: React.FC = () => {
   return (
-    <div className="container mx-auto px-4 mt-10">
-      <h2 className="md:text-4xl text-2xl font-bold mb-6 text-center">UI/UX Projects</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-6 gap-3">
-        {uiUxProjects.map((project, index) => (
-          <ProjectCard key={index} project={project} />
-        ))}
+    <section id="projects" className="py-16 dark:bg-black bg-white text-black dark:text-white">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="md:text-5xl text-3xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            Featured Projects
+          </h2>
+          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            Showcasing full-stack development expertise across web, mobile, and AI/ML domains
+          </p>
+        </div>
+
+        {/* React Native Projects */}
+        <div className="mb-20">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="flex items-center mb-8"
+          >
+            <div className="bg-gradient-to-r from-blue-500 to-cyan-500 p-3 rounded-xl mr-4">
+              <FaMobile className="text-2xl text-white" />
+            </div>
+            <div>
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-800 dark:text-white">
+                📱 React Native Projects
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300">Mobile applications with native performance</p>
+            </div>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {reactNativeProjects.map((project, index) => (
+              <ProjectCard
+                key={project.title}
+                project={project}
+                index={index}
+                icon={<FaMobile />}
+                gradient="from-blue-500 to-cyan-500"
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Web & Full-Stack Projects */}
+        <div className="mb-20">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="flex items-center mb-8"
+          >
+            <div className="bg-gradient-to-r from-green-500 to-teal-500 p-3 rounded-xl mr-4">
+              <FaGlobe className="text-2xl text-white" />
+            </div>
+            <div>
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-800 dark:text-white">
+                🌐 Web & Full-Stack Applications
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300">Scalable web applications with modern technologies</p>
+            </div>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {webProjects.map((project, index) => (
+              <ProjectCard
+                key={project.title}
+                project={project}
+                index={index}
+                icon={<FaGlobe />}
+                gradient="from-green-500 to-teal-500"
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* AI/ML Projects */}
+        <div className="mb-20">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="flex items-center mb-8"
+          >
+            <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-3 rounded-xl mr-4">
+              <FaBrain className="text-2xl text-white" />
+            </div>
+            <div>
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-800 dark:text-white">
+                🧠 AI/ML & Automation Projects
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300">Intelligent systems and automation solutions</p>
+            </div>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {aiMlProjects.map((project, index) => (
+              <ProjectCard
+                key={project.title}
+                project={project}
+                index={index}
+                icon={<FaBrain />}
+                gradient="from-purple-500 to-pink-500"
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Project Statistics */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white text-center"
+        >
+          <h3 className="text-2xl md:text-3xl font-bold mb-6">Project Impact</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div>
+              <div className="text-3xl md:text-4xl font-bold mb-2">25+</div>
+              <div className="text-sm md:text-base opacity-90">Total Projects</div>
+            </div>
+            <div>
+              <div className="text-3xl md:text-4xl font-bold mb-2">9</div>
+              <div className="text-sm md:text-base opacity-90">Mobile Apps</div>
+            </div>
+            <div>
+              <div className="text-3xl md:text-4xl font-bold mb-2">10</div>
+              <div className="text-sm md:text-base opacity-90">Web Applications</div>
+            </div>
+            <div>
+              <div className="text-3xl md:text-4xl font-bold mb-2">6</div>
+              <div className="text-sm md:text-base opacity-90">AI/ML Solutions</div>
+            </div>
+          </div>
+        </motion.div>
       </div>
-    </div>
+    </section>
   );
 };
 
 export default Projects;
-const uiUxProjects = [
-  {
-    title: "InTouch Delta",
-    link: "https://intouch-delta.vercel.app/"
-  },
-  {
-    title: "TipTop Taupe",
-    link: "https://tiptop-taupe.vercel.app/"
-  },
-  {
-    title: "Main Weld Three",
-    link: "https://main-weld-three.vercel.app/"
-  },
-  {
-    title: "Shyft Digitally 360",
-    description: "ERP system designed for users.",
-    link: "https://shyftdigitally360.vercel.app/"
-  },
-  {
-    title: "Host Buddy",
-    description: "Hosting service app.",
-    link: "https://host-buddy-phi.vercel.app/"
-  },
-  {
-    title: "2BMeta",
-    link: "https://2bmeta.vercel.app/"
-  },
-  {
-    title: "Mick Society",
-    link: "https://micksociety.vercel.app/"
-  },
-  {
-    title: "Buddies Club",
-    link: "https://buddies-club.vercel.app/"
-  },
-  {
-    title: "FAANG Investing",
-    link: "https://faang-investing.vercel.app/"
-  },
-  {
-    title: "Analytics Dashboard",
-    link: "https://analytics-dashboard-bice.vercel.app/"
-  },
-  {
-    title: "Tattoo Gallery",
-    link: "https://tattoo-gallery-one.vercel.app/"
-  },
-];
-
