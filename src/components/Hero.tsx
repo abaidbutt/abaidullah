@@ -99,8 +99,7 @@ const Hero: React.FC = () => {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="w-full md:w-1/2 mt-12 md:mt-0 flex justify-center relative"
                     >
-                        <Suspense fallback={<div className="h-16 w-16 animate-bounce rounded-full dark:bg-white bg-black"></div>
-                        }>
+                        <Suspense fallback={<div className="h-16 w-16 animate-bounce rounded-full dark:bg-white bg-black"></div>}>
                             <ImageComponent />
                         </Suspense>
                     </div>

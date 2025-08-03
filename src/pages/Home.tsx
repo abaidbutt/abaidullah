@@ -7,8 +7,6 @@ import Footer from '../components/Footer';
 import Hero from '../components/Hero';
 import Skills from '../components/Skills';
 import VisionMission from '../components/Vision';
-import Pricing from '../components/Pricing';
-import FAQ from '../components/FAQ';
 
 const Home: React.FC = () => {
   return (
