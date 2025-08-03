@@ -36,69 +36,95 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-10 dark:bg-black dark:text-white bg-white text-black relative overflow-hidden">
-      <h2 className="md:text-4xl text-2xl font-bold mb-4 text-center">Let's connect</h2>
-      <p className="text-md md:text-lg mb-4 text-center">Contact me today to schedule a consultation</p>
-      <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-5">
-        <div className=" flex flex-col justify-center space-y-6 mt-8 md:mt-0 md:pl-8">
-          <div className="flex items-center space-x-2">
-            <div className='bg-black dark:bg-white rounded shadow p-2'>
-              <FaMapMarkerAlt size={24} className="text-white dark:text-black" />
+    <section id="contact" className="py-20 dark:bg-gray-800 dark:text-gray-100 bg-white text-gray-900 relative overflow-hidden">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="md:text-5xl text-3xl font-bold mb-6 tracking-tight">Let's Connect</h2>
+          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            Contact me today to schedule a consultation and discuss your project needs
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="flex flex-col justify-center space-y-8">
+            <div className="flex items-center space-x-4">
+              <div className='bg-gray-900 dark:bg-gray-100 rounded-xl shadow-lg p-4'>
+                <FaMapMarkerAlt size={24} className="text-gray-100 dark:text-gray-900" />
+              </div>
+              <a href="https://www.google.com/maps/search/?api=1&query=Lahore%2C+Punjab%2C+Pakistan" target="_blank" rel="noopener noreferrer" className="text-lg hover:text-gray-700 dark:hover:text-gray-300 transition-colors">
+                Lahore, Punjab, Pakistan
+              </a>
             </div>
-            <a href="https://www.google.com/maps/search/?api=1&query=Lahore%2C+Punjab%2C+Pakistan" target="_blank" rel="noopener noreferrer" className="text-lg">
-              Lahore, Punjab, Pakistan
-            </a>
+            <div className="flex items-center space-x-4">
+              <div className='bg-gray-900 dark:bg-gray-100 rounded-xl shadow-lg p-4'>
+                <FaPhone size={24} className="text-gray-100 dark:text-gray-900" />
+              </div>
+              <a href="tel:+923111715499" className="text-lg hover:text-gray-700 dark:hover:text-gray-300 transition-colors">+92 (311) 171-5499</a>
+            </div>
+            <div className="flex items-center space-x-4">
+              <div className='bg-gray-900 dark:bg-gray-100 rounded-xl shadow-lg p-4'>
+                <FaEnvelope size={24} className="text-gray-100 dark:text-gray-900" />
+              </div>
+              <a href="mailto:bestabaidullahbutt@gmail.com" className="text-lg hover:text-gray-700 dark:hover:text-gray-300 transition-colors">bestabaidullahbutt@gmail.com</a>
+            </div>
+            <div className="flex items-center space-x-4">
+              <div className='bg-gray-900 dark:bg-gray-100 rounded-xl shadow-lg p-4'>
+                <FaGithub size={24} className="text-gray-100 dark:text-gray-900" />
+              </div>
+              <a href="https://github.com/abaidbutt" className="text-lg hover:text-gray-700 dark:hover:text-gray-300 transition-colors">github.com/abaidbutt</a>
+            </div>
+            <div className="flex items-center space-x-4">
+              <div className='bg-gray-900 dark:bg-gray-100 rounded-xl shadow-lg p-4'>
+                <TbClockHour4 size={24} className="text-gray-100 dark:text-gray-900" />
+              </div>
+              <span className="text-lg">Monday - Friday | 12pm - 2am</span>
+            </div>
           </div>
-          <div className="flex items-center space-x-2">
-            <div className='bg-black dark:bg-white rounded shadow p-2'>
-              <FaPhone size={24} className="text-white dark:text-black" />
-            </div>
-            <a href="tel:+923111715499" className="text-lg">+92 (311) 171-5499</a>
-          </div>
-          <div className="flex items-center space-x-2">
-            <div className='bg-black dark:bg-white rounded shadow p-2'>
-              <FaEnvelope size={24} className="text-white dark:text-black" />
-            </div>
-            <a href="mailto:bestabaidullahbutt@gmail.com" className="text-lg">bestabaidullahbutt@gmail.com</a>
-          </div>
-          <div className="flex items-center space-x-2">
-            <div className='bg-black dark:bg-white rounded shadow p-2'>
-
-              <FaGithub size={24} className="text-white dark:text-black" />
-            </div>
-            <a href="https://github.com/abaidbutt" className="text-lg hover:text-blue-400">github.com/abaidbutt</a>
-          </div>
-          <div className="flex items-center space-x-2">
-            <div className='bg-black dark:bg-white rounded shadow p-2'>
-              <TbClockHour4 size={24} className="text-white dark:text-black" />
-            </div>
-            <a href="https://github.com/abaidbutt" className="text-lg hover:text-blue-400">
-
-              Monday - Friday | 12pm - 2am
-            </a>
+          
+          <div className="">
+            <form onSubmit={handleSubmit} className="space-y-6 bg-gray-50 dark:bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 transform transition duration-300 hover:shadow-xl">
+              <div>
+                <label className="block text-sm font-semibold mb-2 text-gray-700 dark:text-gray-300">Name</label>
+                <input 
+                  type="text" 
+                  placeholder='Ex: John Doe' 
+                  name="name" 
+                  value={formData.name} 
+                  onChange={handleChange} 
+                  className="w-full p-4 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-all duration-200" 
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-semibold mb-2 text-gray-700 dark:text-gray-300">Email</label>
+                <input 
+                  type="email" 
+                  name="email" 
+                  placeholder='Ex: yourmail@example.com' 
+                  value={formData.email} 
+                  onChange={handleChange} 
+                  className="w-full p-4 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-all duration-200" 
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-semibold mb-2 text-gray-700 dark:text-gray-300">Message</label>
+                <textarea 
+                  placeholder='Write your message or question here' 
+                  name="message" 
+                  value={formData.message} 
+                  onChange={handleChange} 
+                  rows={5}
+                  className="w-full p-4 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-all duration-200 resize-none"
+                ></textarea>
+              </div>
+              <button 
+                type="submit" 
+                className="w-full bg-gray-900 dark:bg-gray-100 text-gray-100 dark:text-gray-900 px-6 py-4 rounded-lg font-semibold transform transition duration-300 hover:bg-gray-800 dark:hover:bg-gray-200 hover:scale-105 shadow-lg hover:shadow-xl"
+              >
+                Get Started
+              </button>
+            </form>
           </div>
         </div>
-        <div className="">
-
-          <form onSubmit={handleSubmit} className="space-y-4 max-w-lg mx-auto md:mx-0 bg-white p-6 rounded shadow-lg transform transition duration-100 hover:scale-105">
-            <div>
-              <label className="block text-sm font-medium">Name</label>
-              <input type="text" placeholder='Ex: John Doe' name="name" value={formData.name} onChange={handleChange} className="w-full p-2 border border-gray-300 rounded" />
-            </div>
-            <div>
-              <label className="block text-sm font-medium">Email</label>
-              <input type="email" name="email" placeholder='Ex: yourmail@example.com' value={formData.email} onChange={handleChange} className="w-full p-2 border border-gray-300 rounded" />
-            </div>
-            <div>
-              <label className="block text-sm font-medium">Message</label>
-              <textarea placeholder='Write your message or question here' name="message" value={formData.message} onChange={handleChange} className="w-full p-2 border border-gray-300 rounded"></textarea>
-            </div>
-            <button type="submit" className="w-full bg-gray-800 text-white px-4 py-2 rounded transform transition duration-100 hover:bg-gray-700">
-              Get Started
-            </button>
-          </form>
-        </div>
-
       </div>
     </section>
   );

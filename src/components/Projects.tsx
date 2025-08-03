@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from "framer-motion"
 import { FiExternalLink } from 'react-icons/fi';
 import { FaMobile, FaGlobe, FaBrain, FaPython, FaAws } from 'react-icons/fa';
-import { SiDjango, SiFastapi, SiFlask, SiReact, SiNodedotjs } from 'react-icons/si';
+import { SiDjango, SiFastapi, SiFlask, SiNodedotjs } from 'react-icons/si';
 
 // React Native Projects
 const reactNativeProjects = [
@@ -201,18 +201,17 @@ const ProjectCard: React.FC<{
   project: any;
   index: number;
   icon: React.ReactNode;
-  gradient: string;
-}> = ({ project, index, icon, gradient }) => {
+}> = ({ project, index, icon }) => {
   const getTechIcon = (tech: string) => {
     const iconMap: { [key: string]: React.ReactNode } = {
-      'React.js': <SiReact className="text-blue-500" />,
-      'React Native': <FaMobile className="text-blue-600" />,
-      'Node.js': <SiNodedotjs className="text-green-600" />,
-      'Python': <FaPython className="text-yellow-500" />,
-      'FastAPI': <SiFastapi className="text-green-500" />,
-      'Django': <SiDjango className="text-green-700" />,
+      'React.js': <div className="w-2 h-2 bg-gray-600 rounded-full" />,
+      'React Native': <FaMobile className="text-gray-600" />,
+      'Node.js': <SiNodedotjs className="text-gray-600" />,
+      'Python': <FaPython className="text-gray-600" />,
+      'FastAPI': <SiFastapi className="text-gray-600" />,
+      'Django': <SiDjango className="text-gray-600" />,
       'Flask': <SiFlask className="text-gray-600" />,
-      'AWS': <FaAws className="text-orange-500" />,
+      'AWS': <FaAws className="text-gray-600" />,
     };
     return iconMap[tech] || <span className="w-2 h-2 bg-gray-400 rounded-full" />;
   };
@@ -223,12 +222,11 @@ const ProjectCard: React.FC<{
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
       whileHover={{ scale: 1.02, y: -5 }}
-      className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700"
+      className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700"
     >
-      <div className={`h-2 bg-gradient-to-r ${gradient}`} />
-      <div className="p-6">
-        <div className="flex items-center justify-between mb-4">
-          <div className={`p-3 rounded-xl bg-gradient-to-r ${gradient} text-white`}>
+      <div className="p-8">
+        <div className="flex items-center justify-between mb-6">
+          <div className="bg-gray-900 dark:bg-gray-100 p-3 rounded-xl text-gray-100 dark:text-gray-900">
             {icon}
           </div>
           <span className="text-xs font-medium px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-gray-600 dark:text-gray-300">
@@ -236,24 +234,24 @@ const ProjectCard: React.FC<{
           </span>
         </div>
         
-        <h3 className="text-xl font-bold mb-3 text-gray-800 dark:text-white">
+        <h3 className="text-xl font-bold mb-4 text-gray-800 dark:text-white">
           {project.title}
         </h3>
         
-        <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm leading-relaxed">
+        <p className="text-gray-600 dark:text-gray-300 mb-6 text-sm leading-relaxed">
           {project.description}
         </p>
         
-        <div className="mb-4">
-          <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2">TECH STACK</p>
+        <div className="mb-6">
+          <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-3 tracking-wide">TECH STACK</p>
           <div className="flex flex-wrap gap-2">
             {project.techStack.map((tech: string, techIndex: number) => (
               <div
                 key={techIndex}
-                className="flex items-center space-x-1 px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded-lg text-xs"
+                className="flex items-center space-x-1 px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-lg text-xs border border-gray-200 dark:border-gray-600"
               >
                 {getTechIcon(tech)}
-                <span className="text-gray-700 dark:text-gray-300">{tech}</span>
+                <span className="text-gray-700 dark:text-gray-300 font-medium">{tech}</span>
               </div>
             ))}
           </div>
@@ -261,7 +259,7 @@ const ProjectCard: React.FC<{
         
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-xs font-semibold text-gray-500 dark:text-gray-400">ROLE</p>
+            <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 tracking-wide">ROLE</p>
             <p className="text-sm font-medium text-gray-700 dark:text-gray-300">{project.role}</p>
           </div>
           {project.link && (
@@ -269,10 +267,10 @@ const ProjectCard: React.FC<{
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center space-x-1 text-blue-600 hover:text-blue-800 transition-colors"
+              className="flex items-center space-x-1 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
             >
               <FiExternalLink size={16} />
-              <span className="text-sm">View</span>
+              <span className="text-sm font-medium">View</span>
             </a>
           )}
         </div>
@@ -283,13 +281,13 @@ const ProjectCard: React.FC<{
 
 const Projects: React.FC = () => {
   return (
-    <section id="projects" className="py-16 dark:bg-black bg-white text-black dark:text-white">
+    <section id="projects" className="py-20 dark:bg-gray-900 bg-gray-50 text-gray-900 dark:text-gray-100">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="md:text-5xl text-3xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <h2 className="md:text-5xl text-3xl font-bold mb-6 tracking-tight">
             Featured Projects
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Showcasing full-stack development expertise across web, mobile, and AI/ML domains
           </p>
         </div>
@@ -300,16 +298,16 @@ const Projects: React.FC = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="flex items-center mb-8"
+            className="flex items-center mb-12"
           >
-            <div className="bg-gradient-to-r from-blue-500 to-cyan-500 p-3 rounded-xl mr-4">
-              <FaMobile className="text-2xl text-white" />
+            <div className="bg-gray-900 dark:bg-gray-100 p-4 rounded-xl mr-6">
+              <FaMobile className="text-2xl text-gray-100 dark:text-gray-900" />
             </div>
             <div>
               <h3 className="text-2xl md:text-3xl font-bold text-gray-800 dark:text-white">
-                📱 React Native Projects
+                Mobile Applications
               </h3>
-              <p className="text-gray-600 dark:text-gray-300">Mobile applications with native performance</p>
+              <p className="text-gray-600 dark:text-gray-300">React Native applications with native performance</p>
             </div>
           </motion.div>
           
@@ -320,7 +318,6 @@ const Projects: React.FC = () => {
                 project={project}
                 index={index}
                 icon={<FaMobile />}
-                gradient="from-blue-500 to-cyan-500"
               />
             ))}
           </div>
@@ -332,14 +329,14 @@ const Projects: React.FC = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex items-center mb-8"
+            className="flex items-center mb-12"
           >
-            <div className="bg-gradient-to-r from-green-500 to-teal-500 p-3 rounded-xl mr-4">
-              <FaGlobe className="text-2xl text-white" />
+            <div className="bg-gray-900 dark:bg-gray-100 p-4 rounded-xl mr-6">
+              <FaGlobe className="text-2xl text-gray-100 dark:text-gray-900" />
             </div>
             <div>
               <h3 className="text-2xl md:text-3xl font-bold text-gray-800 dark:text-white">
-                🌐 Web & Full-Stack Applications
+                Web & Full-Stack Applications
               </h3>
               <p className="text-gray-600 dark:text-gray-300">Scalable web applications with modern technologies</p>
             </div>
@@ -352,7 +349,6 @@ const Projects: React.FC = () => {
                 project={project}
                 index={index}
                 icon={<FaGlobe />}
-                gradient="from-green-500 to-teal-500"
               />
             ))}
           </div>
@@ -364,14 +360,14 @@ const Projects: React.FC = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex items-center mb-8"
+            className="flex items-center mb-12"
           >
-            <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-3 rounded-xl mr-4">
-              <FaBrain className="text-2xl text-white" />
+            <div className="bg-gray-900 dark:bg-gray-100 p-4 rounded-xl mr-6">
+              <FaBrain className="text-2xl text-gray-100 dark:text-gray-900" />
             </div>
             <div>
               <h3 className="text-2xl md:text-3xl font-bold text-gray-800 dark:text-white">
-                🧠 AI/ML & Automation Projects
+                AI/ML & Automation Projects
               </h3>
               <p className="text-gray-600 dark:text-gray-300">Intelligent systems and automation solutions</p>
             </div>
@@ -384,7 +380,6 @@ const Projects: React.FC = () => {
                 project={project}
                 index={index}
                 icon={<FaBrain />}
-                gradient="from-purple-500 to-pink-500"
               />
             ))}
           </div>
@@ -395,25 +390,25 @@ const Projects: React.FC = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white text-center"
+          className="bg-gray-900 dark:bg-gray-100 rounded-2xl p-12 text-gray-100 dark:text-gray-900 text-center"
         >
-          <h3 className="text-2xl md:text-3xl font-bold mb-6">Project Impact</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <h3 className="text-2xl md:text-3xl font-bold mb-8">Project Impact</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div>
               <div className="text-3xl md:text-4xl font-bold mb-2">25+</div>
-              <div className="text-sm md:text-base opacity-90">Total Projects</div>
+              <div className="text-sm md:text-base opacity-80">Total Projects</div>
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-bold mb-2">9</div>
-              <div className="text-sm md:text-base opacity-90">Mobile Apps</div>
+              <div className="text-sm md:text-base opacity-80">Mobile Apps</div>
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-bold mb-2">10</div>
-              <div className="text-sm md:text-base opacity-90">Web Applications</div>
+              <div className="text-sm md:text-base opacity-80">Web Applications</div>
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-bold mb-2">6</div>
-              <div className="text-sm md:text-base opacity-90">AI/ML Solutions</div>
+              <div className="text-sm md:text-base opacity-80">AI/ML Solutions</div>
             </div>
           </div>
         </motion.div>
