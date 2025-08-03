@@ -7,7 +7,6 @@ const skillCategories = [
     {
         title: "Python & Backend",
         icon: <FaPython className="text-3xl mb-2" />,
-        color: "from-blue-500 to-green-500",
         skills: [
             { name: "Python", icon: <FaPython /> },
             { name: "FastAPI", icon: <SiFastapi /> },
@@ -18,7 +17,6 @@ const skillCategories = [
     {
         title: "AI/ML & Data Science",
         icon: <FaBrain className="text-3xl mb-2" />,
-        color: "from-purple-500 to-pink-500",
         skills: [
             { name: "Pandas", icon: <SiPandas /> },
             { name: "NumPy", icon: <SiNumpy /> },
@@ -33,7 +31,6 @@ const skillCategories = [
     {
         title: "MERN Stack",
         icon: <FaReact className="text-3xl mb-2" />,
-        color: "from-cyan-500 to-blue-500",
         skills: [
             { name: "React.js", icon: <FaReact /> },
             { name: "Node.js", icon: <SiNodedotjs /> },
@@ -46,7 +43,6 @@ const skillCategories = [
     {
         title: "Mobile Development",
         icon: <FaMobile className="text-3xl mb-2" />,
-        color: "from-green-500 to-teal-500",
         skills: [
             { name: "React Native", icon: <FaMobile /> },
             { name: "iOS Development", icon: <FaMobile /> },
@@ -57,7 +53,6 @@ const skillCategories = [
     {
         title: "Cloud & DevOps",
         icon: <FaAws className="text-3xl mb-2" />,
-        color: "from-orange-500 to-red-500",
         skills: [
             { name: "AWS", icon: <FaAws /> },
             { name: "EC2", icon: <FaAws /> },
@@ -70,7 +65,6 @@ const skillCategories = [
     {
         title: "Automation & Integration",
         icon: <FaRobot className="text-3xl mb-2" />,
-        color: "from-indigo-500 to-purple-500",
         skills: [
             { name: "n8n Workflows", icon: <FaRobot /> },
             { name: "Chatbots", icon: <FaRobot /> },
@@ -82,13 +76,13 @@ const skillCategories = [
 
 const Skills: React.FC = () => {
     return (
-        <section id="skills" className="py-10 dark:bg-black bg-white text-black dark:text-white">
+        <section id="skills" className="py-20 dark:bg-gray-800 bg-white text-gray-900 dark:text-gray-100">
             <div className="container mx-auto px-4">
-                <div className="text-center mb-12">
-                    <h2 className="md:text-5xl text-3xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                <div className="text-center mb-16">
+                    <h2 className="md:text-5xl text-3xl font-bold mb-6 tracking-tight">
                         Technical Expertise
                     </h2>
-                    <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
                         Full-stack development with cutting-edge AI/ML integration and modern cloud technologies
                     </p>
                 </div>
@@ -101,12 +95,12 @@ const Skills: React.FC = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
                             whileHover={{ scale: 1.02, y: -5 }}
-                            className="bg-gradient-to-br dark:from-gray-800 dark:to-gray-900 from-white to-gray-50 rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700"
+                            className="bg-gray-50 dark:bg-gray-900 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700"
                         >
-                            <div className={`bg-gradient-to-r ${category.color} p-3 rounded-xl w-fit mx-auto mb-4 text-white`}>
+                            <div className="bg-gray-900 dark:bg-gray-100 p-4 rounded-xl w-fit mx-auto mb-6 text-gray-100 dark:text-gray-900">
                                 {category.icon}
                             </div>
-                            <h3 className="text-xl font-bold mb-4 text-center">{category.title}</h3>
+                            <h3 className="text-xl font-bold mb-6 text-center">{category.title}</h3>
                             <div className="grid grid-cols-2 gap-3">
                                 {category.skills.map((skill, skillIndex) => (
                                     <motion.div
@@ -114,9 +108,9 @@ const Skills: React.FC = () => {
                                         initial={{ opacity: 0, scale: 0.8 }}
                                         animate={{ opacity: 1, scale: 1 }}
                                         transition={{ duration: 0.3, delay: (categoryIndex * 0.1) + (skillIndex * 0.05) }}
-                                        className="flex items-center space-x-2 p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-200"
+                                        className="flex items-center space-x-2 p-3 rounded-lg bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200 border border-gray-200 dark:border-gray-600"
                                     >
-                                        <span className="text-sm">{skill.icon}</span>
+                                        <span className="text-sm text-gray-700 dark:text-gray-300">{skill.icon}</span>
                                         <span className="text-sm font-medium">{skill.name}</span>
                                     </motion.div>
                                 ))}
@@ -130,9 +124,9 @@ const Skills: React.FC = () => {
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.5 }}
-                    className="mt-16 text-center"
+                    className="mt-20 text-center"
                 >
-                    <h3 className="text-2xl md:text-3xl font-bold mb-8 text-gray-800 dark:text-white">
+                    <h3 className="text-2xl md:text-3xl font-bold mb-12 text-gray-800 dark:text-white">
                         AI/ML Specializations
                     </h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
@@ -152,7 +146,7 @@ const Skills: React.FC = () => {
                                 animate={{ opacity: 1, scale: 1 }}
                                 transition={{ duration: 0.4, delay: 0.6 + (index * 0.1) }}
                                 whileHover={{ scale: 1.05 }}
-                                className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-sm font-medium"
+                                className="bg-gray-900 dark:bg-gray-100 text-gray-100 dark:text-gray-900 px-6 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-sm font-medium"
                             >
                                 {specialization}
                             </motion.div>

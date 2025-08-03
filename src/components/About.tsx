@@ -6,20 +6,20 @@ import ProgressBars from './ProgressBar';
 
 const About: React.FC = () => {
   return (
-    <section id="about" className="py-20 dark:bg-black dark:text-white bg-white text-black relative overflow-hidden">
-      {/* Background Elements */}
+    <section id="about" className="py-20 dark:bg-gray-900 dark:text-gray-100 bg-gray-50 text-gray-900 relative overflow-hidden">
+      {/* Subtle Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 right-20 w-64 h-64 bg-gradient-to-br from-blue-400/10 to-purple-600/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-20 w-64 h-64 bg-gradient-to-tr from-green-400/10 to-blue-600/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-20 right-20 w-64 h-64 bg-gradient-to-br from-gray-200/20 to-slate-300/10 dark:from-gray-700/20 dark:to-slate-800/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-20 w-64 h-64 bg-gradient-to-tr from-slate-200/20 to-gray-300/10 dark:from-slate-700/20 dark:to-gray-800/10 rounded-full blur-3xl"></div>
       </div>
       
-      <div className="container mx-auto p-3">
-        <div className="text-center mb-12">
+      <div className="container mx-auto p-3 relative z-10">
+        <div className="text-center mb-16">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="md:text-5xl text-3xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+            className="md:text-5xl text-3xl font-bold mb-6 tracking-tight"
           >
             About Me
           </motion.h2>
@@ -27,23 +27,23 @@ const About: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto"
+            className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed"
           >
             Full-stack developer and AI engineer passionate about creating intelligent, scalable solutions
           </motion.p>
         </div>
         
-        <div className="md:grid md:grid-cols-2 md:gap-8">
+        <div className="md:grid md:grid-cols-2 md:gap-12">
           <div className="space-y-8">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-900 p-6 rounded-2xl border border-gray-200 dark:border-gray-700"
+              className="bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300"
             >
-              <div className="flex items-center mb-4">
-                <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-2 rounded-lg mr-3">
-                  <FaReact className="text-white text-xl" />
+              <div className="flex items-center mb-6">
+                <div className="bg-gray-900 dark:bg-gray-100 p-3 rounded-xl mr-4">
+                  <FaReact className="text-gray-100 dark:text-gray-900 text-xl" />
                 </div>
                 <h3 className="text-xl font-bold">Full-Stack Development</h3>
               </div>
@@ -57,11 +57,11 @@ const About: React.FC = () => {
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="bg-gradient-to-r from-green-50 to-teal-50 dark:from-gray-800 dark:to-gray-900 p-6 rounded-2xl border border-gray-200 dark:border-gray-700"
+              className="bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300"
             >
-              <div className="flex items-center mb-4">
-                <div className="bg-gradient-to-r from-yellow-500 to-orange-500 p-2 rounded-lg mr-3">
-                  <FaPython className="text-white text-xl" />
+              <div className="flex items-center mb-6">
+                <div className="bg-gray-900 dark:bg-gray-100 p-3 rounded-xl mr-4">
+                  <FaPython className="text-gray-100 dark:text-gray-900 text-xl" />
                 </div>
                 <h3 className="text-xl font-bold">Python & Backend Expertise</h3>
               </div>
@@ -75,11 +75,11 @@ const About: React.FC = () => {
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-gray-800 dark:to-gray-900 p-6 rounded-2xl border border-gray-200 dark:border-gray-700"
+              className="bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300"
             >
-              <div className="flex items-center mb-4">
-                <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-2 rounded-lg mr-3">
-                  <FaBrain className="text-white text-xl" />
+              <div className="flex items-center mb-6">
+                <div className="bg-gray-900 dark:bg-gray-100 p-3 rounded-xl mr-4">
+                  <FaBrain className="text-gray-100 dark:text-gray-900 text-xl" />
                 </div>
                 <h3 className="text-xl font-bold">AI/ML & Automation</h3>
               </div>
@@ -93,11 +93,11 @@ const About: React.FC = () => {
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="bg-gradient-to-r from-orange-50 to-red-50 dark:from-gray-800 dark:to-gray-900 p-6 rounded-2xl border border-gray-200 dark:border-gray-700"
+              className="bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300"
             >
-              <div className="flex items-center mb-4">
-                <div className="bg-gradient-to-r from-orange-500 to-red-500 p-2 rounded-lg mr-3">
-                  <FaAws className="text-white text-xl" />
+              <div className="flex items-center mb-6">
+                <div className="bg-gray-900 dark:bg-gray-100 p-3 rounded-xl mr-4">
+                  <FaAws className="text-gray-100 dark:text-gray-900 text-xl" />
                 </div>
                 <h3 className="text-xl font-bold">Cloud & DevOps</h3>
               </div>
@@ -114,8 +114,8 @@ const About: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mt-12 md:mt-0"
           >
-            <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-xl border border-gray-200 dark:border-gray-700">
-              <h3 className="text-2xl font-bold mb-6 text-center text-gray-800 dark:text-white">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl border border-gray-200 dark:border-gray-700">
+              <h3 className="text-2xl font-bold mb-8 text-center text-gray-800 dark:text-white">
                 Core Competencies
               </h3>
               <ProgressBars />
@@ -126,21 +126,21 @@ const About: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
-              className="mt-8 bg-gradient-to-r from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-6 border border-gray-200 dark:border-gray-700"
+              className="mt-8 bg-white dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700 shadow-lg"
             >
-              <h4 className="text-lg font-bold mb-4 text-center text-gray-800 dark:text-white">
+              <h4 className="text-lg font-bold mb-6 text-center text-gray-800 dark:text-white">
                 Technology Stack
               </h4>
               <div className="grid grid-cols-4 gap-4">
                 {[
-                  { icon: <FaPython />, name: "Python", color: "text-yellow-500" },
-                  { icon: <SiFastapi />, name: "FastAPI", color: "text-green-500" },
-                  { icon: <SiDjango />, name: "Django", color: "text-green-700" },
-                  { icon: <FaReact />, name: "React", color: "text-blue-500" },
-                  { icon: <FaMobile />, name: "React Native", color: "text-blue-600" },
-                  { icon: <FaBrain />, name: "AI/ML", color: "text-purple-500" },
-                  { icon: <FaAws />, name: "AWS", color: "text-orange-500" },
-                  { icon: <FaRobot />, name: "Automation", color: "text-indigo-500" },
+                  { icon: <FaPython />, name: "Python", color: "text-gray-700 dark:text-gray-300" },
+                  { icon: <SiFastapi />, name: "FastAPI", color: "text-gray-700 dark:text-gray-300" },
+                  { icon: <SiDjango />, name: "Django", color: "text-gray-700 dark:text-gray-300" },
+                  { icon: <FaReact />, name: "React", color: "text-gray-700 dark:text-gray-300" },
+                  { icon: <FaMobile />, name: "React Native", color: "text-gray-700 dark:text-gray-300" },
+                  { icon: <FaBrain />, name: "AI/ML", color: "text-gray-700 dark:text-gray-300" },
+                  { icon: <FaAws />, name: "AWS", color: "text-gray-700 dark:text-gray-300" },
+                  { icon: <FaRobot />, name: "Automation", color: "text-gray-700 dark:text-gray-300" },
                 ].map((tech, index) => (
                   <motion.div
                     key={tech.name}
@@ -148,7 +148,7 @@ const About: React.FC = () => {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.3, delay: 0.9 + (index * 0.1) }}
                     whileHover={{ scale: 1.1 }}
-                    className="flex flex-col items-center p-3 bg-white dark:bg-gray-700 rounded-xl shadow-md hover:shadow-lg transition-all duration-200"
+                    className="flex flex-col items-center p-4 bg-gray-50 dark:bg-gray-700 rounded-xl shadow-md hover:shadow-lg transition-all duration-200"
                   >
                     <div className={`text-2xl mb-2 ${tech.color}`}>
                       {tech.icon}

@@ -24,13 +24,14 @@ const ProgressBar: React.FC<ProgressBarProps> = ({ label, percentage }) => {
   }, [percentage]);
 
   return (
-    <div>
-      <p className="flex justify-between">
-        {label} <span>{width}%</span>
+    <div className="mb-6">
+      <p className="flex justify-between mb-2 text-sm font-medium">
+        <span>{label}</span>
+        <span>{width}%</span>
       </p>
-      <div className="bg-gray-300 dark:bg-gray-600 h-4 rounded-full overflow-hidden">
+      <div className="bg-gray-200 dark:bg-gray-700 h-3 rounded-full overflow-hidden">
         <div
-          className="bg-black dark:bg-white h-full"
+          className="bg-gray-900 dark:bg-gray-100 h-full transition-all duration-300 ease-out rounded-full"
           style={{ width: `${width}%` }}
         ></div>
       </div>
@@ -51,7 +52,7 @@ const ProgressBars: React.FC = () => {
   return (
     <section className="">
       <div className="container mx-auto md:px-4">
-        <div className="space-y-4">
+        <div className="space-y-2">
           {progressData.map((progress, index) => (
             <ProgressBar
               key={index}
