@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaLightbulb, FaCogs, FaShieldAlt, FaChartLine, FaClock, FaRocket, FaBrain, FaTools, FaTrophy } from 'react-icons/fa';
+import { FaLightbulb, FaCogs, FaShieldAlt, FaChartLine, FaRocket, FaBrain, FaTools, FaTrophy } from 'react-icons/fa';
 
 const VisionMission: React.FC = () => {
     return (

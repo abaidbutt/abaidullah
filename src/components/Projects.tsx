@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from "framer-motion"
-import { FiExternalLink, FiGithub } from 'react-icons/fi';
-import { FaMobile, FaGlobe, FaBrain, FaRobot, FaPython, FaReact, FaAws } from 'react-icons/fa';
+import { FiExternalLink } from 'react-icons/fi';
+import { FaMobile, FaGlobe, FaBrain, FaPython, FaAws } from 'react-icons/fa';
 import { SiDjango, SiFastapi, SiFlask, SiReact, SiNodedotjs } from 'react-icons/si';
 
 // React Native Projects

@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaPython, FaReact, FaMobile, FaBrain, FaAws, FaRobot } from 'react-icons/fa';
-import { SiDjango, SiFastapi, SiFlask, SiTensorflow } from 'react-icons/si';
+import { SiDjango, SiFastapi } from 'react-icons/si';
 import ProgressBars from './ProgressBar';
 
 const About: React.FC = () => {
