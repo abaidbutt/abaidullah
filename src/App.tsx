@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import './App.css';
+import { useState, useEffect } from 'react';
 import Home from './pages/Home';
 import SpinLoader from './components/SpinLoader';
+import './index.css';
 
 function App() {
   const [loading, setLoading] = useState(true);

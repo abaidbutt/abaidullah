@@ -11,6 +11,7 @@ const Hero: React.FC = () => {
                 <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-gray-200/30 to-slate-300/20 dark:from-gray-700/20 dark:to-slate-800/10 rounded-full blur-3xl"></div>
             </div>
 
+
             <div className="container mx-auto px-4">
                 <div className="flex flex-col md:flex-row items-center">
                     <motion.div
@@ -111,9 +112,11 @@ const Hero: React.FC = () => {
                     transition={{ duration: 0.8, delay: 0.2 }}
                     className="w-full md:w-1/2 mt-12 md:mt-0 flex justify-center relative"
                 >
-                    <Suspense fallback={<div className="h-16 w-16 animate-bounce rounded-full dark:bg-white bg-black"></div>}>
-                        <ImageComponent />
-                    </Suspense>
+                    <img
+                        src={"./abaid-ullah.jpg"}
+                        alt="Abaid Ullah"
+                        className="rounded-full w-full h-full object-cover"
+                    />
                 </motion.div> */}
 
             </div>
@@ -134,7 +137,7 @@ const ImageComponent: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-gray-800 via-gray-700 to-gray-900 dark:from-gray-200 dark:via-gray-300 dark:to-gray-100 rounded-full p-1">
                     <div className="w-full h-full bg-gray-50 dark:bg-gray-900 rounded-full p-2">
                         <img
-                            src={process.env.PUBLIC_URL + "/abaid-ullah.jpg"}
+                            src={"./abaid-ullah.jpg"}
                             alt="Abaid Ullah"
                             className="rounded-full w-full h-full object-cover"
                         />
@@ -180,7 +183,7 @@ const ProjectSummary: React.FC = () => {
             className="absolute -bottom-4 -right-4 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 md:block hidden"
         >
             <div className="text-center">
-                <p className="text-2xl font-bold text-gray-900 dark:text-gray-100">25+</p>
+                <p className="text-2xl font-bold text-gray-900 dark:text-gray-100">50+</p>
                 <p className="text-xs text-gray-600 dark:text-gray-400">Projects</p>
             </div>
         </motion.div>
@@ -197,7 +200,7 @@ const Experience: React.FC = () => {
             className="absolute -bottom-4 -left-4 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700"
         >
             <div className="text-center">
-                <p className="text-2xl font-bold text-gray-900 dark:text-gray-100">4+</p>
+                <p className="text-2xl font-bold text-gray-900 dark:text-gray-100">5+</p>
                 <p className="text-xs text-gray-600 dark:text-gray-400">Years Exp</p>
             </div>
         </motion.div>
