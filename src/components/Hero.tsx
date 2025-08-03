@@ -105,7 +105,7 @@ const Hero: React.FC = () => {
                     </motion.div>
                 </div>
 
-                <motion.div
+                {/* <motion.div
                     initial={{ opacity: 0, x: 50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
@@ -114,7 +114,7 @@ const Hero: React.FC = () => {
                     <Suspense fallback={<div className="h-16 w-16 animate-bounce rounded-full dark:bg-white bg-black"></div>}>
                         <ImageComponent />
                     </Suspense>
-                </motion.div>
+                </motion.div> */}
 
             </div>
         </section>
