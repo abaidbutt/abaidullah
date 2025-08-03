@@ -10,10 +10,10 @@ const Hero: React.FC = () => {
                 <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-purple-600/20 rounded-full blur-3xl"></div>
                 <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-green-400/20 to-blue-600/20 rounded-full blur-3xl"></div>
             </div>
-            
+
             <div className="container mx-auto px-4">
                 <div className="flex flex-col md:flex-row items-center">
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}
@@ -29,8 +29,8 @@ const Hero: React.FC = () => {
                                 Full-Stack Developer & AI Engineer
                             </span>
                         </motion.div>
-                        
-                        <motion.h1 
+
+                        <motion.h1
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.3 }}
@@ -41,8 +41,8 @@ const Hero: React.FC = () => {
                                 Abaid Ullah
                             </span>
                         </motion.h1>
-                        
-                        <motion.p 
+
+                        <motion.p
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.4 }}
@@ -54,27 +54,27 @@ const Hero: React.FC = () => {
                             <span className="font-semibold text-green-600">React Native</span>, and{' '}
                             <span className="font-semibold text-purple-600">AI/ML</span> technologies
                         </motion.p>
-                        
+
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.5 }}
                             className="flex flex-col sm:flex-row gap-4 mb-8"
                         >
-                            <a 
-                                href="#contact" 
+                            <a
+                                href="#contact"
                                 className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
                             >
                                 Let's Collaborate
                             </a>
-                            <a 
-                                href="#projects" 
+                            <a
+                                href="#projects"
                                 className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-semibold rounded-xl hover:border-blue-600 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300"
                             >
                                 View Projects
                             </a>
                         </motion.div>
-                        
+
                         {/* Tech Stack Icons */}
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
@@ -91,19 +91,20 @@ const Hero: React.FC = () => {
                                 <FaAws className="text-2xl text-orange-500 hover:scale-110 transition-transform" />
                             </div>
                         </motion.div>
-                    </div>
-                    
-                    <motion.div 
-                        initial={{ opacity: 0, x: 50 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
-                        className="w-full md:w-1/2 mt-12 md:mt-0 flex justify-center relative"
-                    >
-                        <Suspense fallback={<div className="h-16 w-16 animate-bounce rounded-full dark:bg-white bg-black"></div>}>
-                            <ImageComponent />
-                        </Suspense>
-                    </div>
+                    </motion.div >
                 </div>
+
+                <motion.div
+                    initial={{ opacity: 0, x: 50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                    className="w-full md:w-1/2 mt-12 md:mt-0 flex justify-center relative"
+                >
+                    <Suspense fallback={<div className="h-16 w-16 animate-bounce rounded-full dark:bg-white bg-black"></div>}>
+                        <ImageComponent />
+                    </Suspense>
+                </motion.div>
+
             </div>
         </section>
     );
@@ -128,7 +129,7 @@ const ImageComponent: React.FC = () => {
                         />
                     </div>
                 </div>
-                
+
                 {/* Floating Elements */}
                 <StarRating />
                 <Experience />
@@ -193,3 +194,4 @@ const Experience: React.FC = () => {
 };
 
 export default Hero;
+Ï
