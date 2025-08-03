@@ -395,19 +395,19 @@ const Projects: React.FC = () => {
           <h3 className="text-2xl md:text-3xl font-bold mb-8">Project Impact</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div>
-              <div className="text-3xl md:text-4xl font-bold mb-2">25+</div>
+              <div className="text-3xl md:text-4xl font-bold mb-2">50+</div>
               <div className="text-sm md:text-base opacity-80">Total Projects</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold mb-2">9</div>
+              <div className="text-3xl md:text-4xl font-bold mb-2">10</div>
               <div className="text-sm md:text-base opacity-80">Mobile Apps</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold mb-2">10</div>
+              <div className="text-3xl md:text-4xl font-bold mb-2">40</div>
               <div className="text-sm md:text-base opacity-80">Web Applications</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold mb-2">6</div>
+              <div className="text-3xl md:text-4xl font-bold mb-2">15</div>
               <div className="text-sm md:text-base opacity-80">AI/ML Solutions</div>
             </div>
           </div>
