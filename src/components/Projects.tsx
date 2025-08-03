@@ -250,6 +250,7 @@ const ProjectCard: React.FC<{
                 key={techIndex}
                 className="flex items-center space-x-1 px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-lg text-xs border border-gray-200 dark:border-gray-600"
               >
+                
                 {getTechIcon(tech)}
                 <span className="text-gray-700 dark:text-gray-300 font-medium">{tech}</span>
               </div>
