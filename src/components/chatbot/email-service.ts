@@ -24,7 +24,7 @@ export const emailTemplates: Record<string, EmailTemplate> = {
     quote_form: {
         id: "quote_form",
         name: "Project Quote Form",
-        subject: "Project Quote Request - Softkai",
+        subject: "Project Quote Request",
         content: `
 <!DOCTYPE html>
 <html>
@@ -51,13 +51,13 @@ export const emailTemplates: Record<string, EmailTemplate> = {
         <div class="content">
             <p>Hello {{userName}},</p>
             
-            <p>Thank you for your interest in Softkai! We're excited to learn about your project and provide you with a detailed quote.</p>
+            <p>Thank you for your interest! We're excited to learn about your project and provide you with a detailed quote.</p>
             
             <div class="form-section">
                 <h3>📋 Project Details Form</h3>
                 <p>Please fill out our comprehensive project form to help us understand your requirements:</p>
                 
-                <a href="https://softkai.com/quote-form?session={{sessionId}}" class="button">
+                <a href="https://abaidbutt.com/quote-form?session={{sessionId}}" class="button">
                     Complete Project Form →
                 </a>
                 
@@ -81,15 +81,15 @@ export const emailTemplates: Record<string, EmailTemplate> = {
                 <h3>📞 Need Immediate Assistance?</h3>
                 <p>Our team is available to answer any questions:</p>
                 <ul>
-                    <li>📧 Email: info@softkai.com</li>
-                    <li>📱 Phone: +92 (325) 3962130</li>
+                    <li>📧 Email: bestabaidullahbutt@gmail.com</li>
+                    <li>📱 Phone: +92 (311) 1715499</li>
                     <li>💬 Live Chat: Available on our website</li>
                 </ul>
             </div>
         </div>
         
         <div class="footer">
-            <p>Best regards,<br><strong>The Softkai Team</strong></p>
+            <p>Best regards,<br><strong>Abaid Butt</strong></p>
             <p>Driving Tomorrow's Possibilities</p>
         </div>
     </div>
@@ -102,7 +102,7 @@ export const emailTemplates: Record<string, EmailTemplate> = {
     contact_info: {
         id: "contact_info",
         name: "Contact Information",
-        subject: "Softkai Contact Information & Next Steps",
+        subject: " Contact Information & Next Steps",
         content: `
 <!DOCTYPE html>
 <html>
@@ -130,12 +130,12 @@ export const emailTemplates: Record<string, EmailTemplate> = {
         <div class="content">
             <p>Hello {{userName}},</p>
             
-            <p>Here are all the ways you can connect with our team at Softkai:</p>
+            <p>Here are all the ways you can connect with me:</p>
             
             <div class="contact-card">
                 <h3>🚀 Immediate Support</h3>
-                <p><strong>📧 Email:</strong> info@softkai.com</p>
-                <p><strong>📱 Phone:</strong> +92 (325) 3962130</p>
+                <p><strong>📧 Email:</strong> bestabaidullahbutt@gmail.com</p>
+                <p><strong>📱 Phone:</strong> +92 (311) 1715499</p>
                 <p><strong>💬 Live Chat:</strong> Available 24/7 on our website</p>
                 <p><strong>⏰ Response Time:</strong> Within 2 hours during business hours</p>
             </div>
@@ -143,8 +143,8 @@ export const emailTemplates: Record<string, EmailTemplate> = {
             <div class="contact-card">
                 <h3>📅 Schedule a Meeting</h3>
                 <p>Book a consultation that fits your schedule:</p>
-                <a href="https://calendly.com/softkai/consultation" class="button">Book Free Consultation</a>
-                <a href="https://calendly.com/softkai/technical-deep-dive" class="button">Technical Deep Dive</a>
+                <a href="https://calendly.com/bestabaidullahbutt/consultation" class="button">Book Free Consultation</a>
+                <a href="https://calendly.com/bestabaidullahbutt/technical-deep-dive" class="button">Technical Deep Dive</a>
             </div>
             
             <h3>🌍 Global Offices</h3>
@@ -152,7 +152,7 @@ export const emailTemplates: Record<string, EmailTemplate> = {
                 <div class="office-card">
                     <h4>🇺🇸 San Francisco (HQ)</h4>
                     <p>123 Innovation Drive, Suite 500<br>San Francisco, CA 94107</p>
-                    <p>📞 +92 (325) 3962130</p>
+                    <p>📞 +92 (311) 1715499</p>
                     <p>🕘 9AM - 6PM PST</p>
                 </div>
                 
@@ -181,9 +181,9 @@ export const emailTemplates: Record<string, EmailTemplate> = {
             <div class="contact-card">
                 <h3>🎯 What's Your Next Step?</h3>
                 <p>Choose the option that works best for you:</p>
-                <a href="mailto:info@softkai.com?subject=Project Inquiry" class="button">Send Email</a>
-                <a href="tel:+923253962130" class="button">Call Now</a>
-                <a href="https://softkai.com/chat" class="button">Start Live Chat</a>
+                <a href="mailto:bestabaidullahbutt@gmail.com?subject=Project Inquiry" class="button">Send Email</a>
+                <a href="tel:+923111715499" class="button">Call Now</a>
+                <a href="https://abaidbutt.com/chat" class="button">Start Live Chat</a>
             </div>
         </div>
     </div>
@@ -196,7 +196,7 @@ export const emailTemplates: Record<string, EmailTemplate> = {
     calendar_link: {
         id: "calendar_link",
         name: "Meeting Scheduler",
-        subject: "Schedule Your Consultation - Softkai",
+        subject: "Schedule Your Consultation with me",
         content: `
 <!DOCTYPE html>
 <html>
@@ -223,13 +223,13 @@ export const emailTemplates: Record<string, EmailTemplate> = {
         <div class="content">
             <p>Hello {{userName}},</p>
             
-            <p>Thank you for your interest in scheduling a consultation with Softkai! Choose the meeting type that best fits your needs:</p>
+            <p>Thank you for your interest in scheduling a consultation with me! Choose the meeting type that best fits your needs:</p>
             
             <div class="meeting-option">
                 <h3>🆓 Free Consultation (30 minutes)</h3>
                 <p><strong>Perfect for:</strong> Initial project discussion, service overview, basic questions</p>
                 <p><strong>What we'll cover:</strong> Your project goals, our services, next steps</p>
-                <a href="https://calendly.com/softkai/free-consultation?utm_source=email&utm_campaign=chatbot" class="button">
+                <a href="https://calendly.com/bestabaidullahbutt/free-consultation?utm_source=email&utm_campaign=chatbot" class="button">
                     Book Free Consultation →
                 </a>
             </div>
@@ -238,7 +238,7 @@ export const emailTemplates: Record<string, EmailTemplate> = {
                 <h3>🔧 Technical Deep Dive (60 minutes)</h3>
                 <p><strong>Perfect for:</strong> Detailed technical requirements, architecture planning, complex projects</p>
                 <p><strong>What we'll cover:</strong> Technical specifications, timeline, resource planning</p>
-                <a href="https://calendly.com/softkai/technical-deep-dive?utm_source=email&utm_campaign=chatbot" class="button">
+                <a href="https://calendly.com/bestabaidullahbutt/technical-deep-dive?utm_source=email&utm_campaign=chatbot" class="button">
                     Book Technical Session →
                 </a>
             </div>
@@ -247,7 +247,7 @@ export const emailTemplates: Record<string, EmailTemplate> = {
                 <h3>💼 Executive Briefing (45 minutes)</h3>
                 <p><strong>Perfect for:</strong> Strategic planning, budget discussions, stakeholder alignment</p>
                 <p><strong>What we'll cover:</strong> Business impact, ROI, strategic roadmap</p>
-                <a href="https://calendly.com/softkai/executive-briefing?utm_source=email&utm_campaign=chatbot" class="button">
+                <a href="https://calendly.com/bestabaidullahbutt/executive-briefing?utm_source=email&utm_campaign=chatbot" class="button">
                     Book Executive Meeting →
                 </a>
             </div>
@@ -273,7 +273,7 @@ export const emailTemplates: Record<string, EmailTemplate> = {
                 </ol>
             </div>
             
-            <p><strong>Questions before scheduling?</strong> Reply to this email or call us at +92 (325) 3962130</p>
+            <p><strong>Questions before scheduling?</strong> Reply to this email or call us at +92 (311) 1715499</p>
         </div>
     </div>
 </body>
@@ -285,13 +285,13 @@ export const emailTemplates: Record<string, EmailTemplate> = {
     brochure: {
         id: "brochure",
         name: "Company Brochure",
-        subject: "Softkai Company Information & Capabilities",
+        subject: " Company Information & Capabilities",
         content: `
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Softkai Company Brochure</title>
+    <title> Company Brochure</title>
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
         .container { max-width: 600px; margin: 0 auto; padding: 20px; }
@@ -307,16 +307,16 @@ export const emailTemplates: Record<string, EmailTemplate> = {
 <body>
     <div class="container">
         <div class="header">
-            <h1>🚀 Softkai</h1>
+            <h1>🚀 Abaid Ullah</h1>
             <p>Driving Tomorrow's Possibilities</p>
         </div>
         
         <div class="content">
             <p>Hello {{userName}},</p>
             
-            <p>Thank you for your interest in Softkai! Here's everything you need to know about our company and capabilities.</p>
+            <p>Thank you for your interest! Here's everything you need to know about our company and capabilities.</p>
             
-            <h3>🌟 About Softkai</h3>
+            <h3>🌟 About Me</h3>
             <p>We're a global technology company specializing in innovative solutions that transform businesses and drive digital excellence across industries worldwide. With over 50+ experts and offices in 4 countries, we deliver cutting-edge technology solutions.</p>
             
             <div class="stats-grid">
@@ -366,7 +366,7 @@ export const emailTemplates: Record<string, EmailTemplate> = {
                 </div>
             </div>
             
-            <h3>🏆 Why Choose Softkai?</h3>
+            <h3>🏆 Why Choose Me?</h3>
             <ul>
                 <li><strong>Proven Expertise:</strong> 10+ years of industry experience</li>
                 <li><strong>Global Reach:</strong> Teams across 4 continents</li>
@@ -380,16 +380,16 @@ export const emailTemplates: Record<string, EmailTemplate> = {
             <p>Let's discuss how we can help transform your business:</p>
             
             <div style="text-align: center; margin: 30px 0;">
-                <a href="https://calendly.com/softkai/consultation" class="button">Schedule Free Consultation</a>
-                <a href="https://softkai.com/quote" class="button">Get Project Quote</a>
-                <a href="mailto:info@softkai.com" class="button">Send Email</a>
+                <a href="https://calendly.com/bestabaidullahbutt/consultation" class="button">Schedule Free Consultation</a>
+                <a href="https://abaidbutt.com/quote" class="button">Get Project Quote</a>
+                <a href="mailto:bestabaidullahbutt@gmail.com" class="button">Send Email</a>
             </div>
             
             <p style="text-align: center; margin-top: 30px;">
                 <strong>Contact Information:</strong><br>
-                📧 info@softkai.com<br>
-                📱 +92 (325) 3962130<br>
-                🌐 www.softkai.com
+                📧 bestabaidullahbutt@gmail.com<br>
+                📱 +92 (311) 1715499<br>
+                🌐 www.abaidbutt.verce.app
             </p>
         </div>
     </div>

@@ -2,12 +2,140 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+    <link rel="icon" type="image/svg+xml" href="/abaid-ullah.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
+    <meta
+      name="description"
+      content="Full-Stack Developer & AI Engineer | Abaid Ullah - Crafting intelligent solutions with Python, MERN Stack, React Native, and AI/ML technologies"
+    />
+    <meta
+      name="keywords"
+      content="Full-Stack Developer, AI Engineer, Python, MERN Stack, React Native, Machine Learning"
+    />
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta
+      property="og:title"
+      content="Abaid Ullah | Full-Stack Developer & AI Engineer"
+    />
+    <meta
+      property="og:description"
+      content="Crafting intelligent solutions with Python, MERN Stack, React Native, and AI/ML technologies"
+    />
+    <meta property="og:image" content="/abaid-ullah.jpg" />
+    <meta property="og:url" content="https://abaidbutt.vercel.app" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Abaid Ullah | Full-Stack Developer & AI Engineer"
+    />
+    <meta
+      name="twitter:description"
+      content="Crafting intelligent solutions with Python, MERN Stack, React Native, and AI/ML technologies"
+    />
+    <meta name="twitter:image" content="/abaid-ullah.jpg" />
+
+    <!-- Preconnect to important domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <title>Abaid Ullah | Full-Stack Developer & AI Engineer</title>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Abaid Ullah",
+        "jobTitle": "Full-Stack Developer & AI Engineer",
+        "url": "https://abaidbutt.vercel.app",
+        "sameAs": [
+          "https://github.com/abaidbutt",
+          "https://linkedin.com/in/abaidbutt"
+        ],
+        "description": "Crafting intelligent solutions with Python, MERN Stack, React Native, and AI/ML technologies"
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
+
+    <!-- Loading animation that will be removed by React -->
+    <div
+      id="loading-screen"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+      "
+    >
+      <div style="text-align: center">
+        <div
+          style="
+            width: 80px;
+            height: 80px;
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid #3498db;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+          "
+        ></div>
+        <h2 style="font-family: 'Inter', sans-serif; color: #333">
+          Loading Portfolio...
+        </h2>
+      </div>
+    </div>
+
+    <script>
+      // Remove loading screen when app mounts
+      window.addEventListener("load", function () {
+        setTimeout(function () {
+          const loadingScreen = document.getElementById("loading-screen");
+          if (loadingScreen) {
+            loadingScreen.style.opacity = "0";
+            setTimeout(() => loadingScreen.remove(), 500);
+          }
+        }, 1000);
+      });
+    </script>
+
     <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Analytics Script (optional) -->
+    <!-- <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-YOURID"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-YOURID");
+    </script> -->
   </body>
 </html>

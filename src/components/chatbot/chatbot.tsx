@@ -68,8 +68,8 @@ const quickActions = [
 
 const predefinedResponses = {
   greeting: [
-    "Hello! I'm KaiBot, your AI assistant. How can I help you today?",
-    "Hi there! Welcome to Softkai. What can I assist you with?",
+    "Hello! I'm Abaid, your AI assistant. How can I help you today?",
+    "Hi there! Welcome to my portfolio. What can I assist you with?",
     "Greetings! I'm here to help you with any questions about our services.",
   ],
   services: {
@@ -83,7 +83,7 @@ const predefinedResponses = {
       "We provide cybersecurity solutions including penetration testing, security audits, and compliance consulting. What security concerns do you have?",
   },
   contact:
-    "You can reach us through multiple channels:\n📧 Email: info@softkai.com\n📞 Phone: +92 (325) 3962130\n💬 Live Chat: Right here!\n📅 Schedule: Book a consultation\n\nWould you like me to help you with any of these options?",
+    "You can reach us through multiple channels:\n📧 Email: bestabaidullahbutt@gmail.com\n📞 Phone: +92 (311) 1715499\n💬 Live Chat: Right here!\n📅 Schedule: Book a consultation\n\nWould you like me to help you with any of these options?",
   quote:
     "I'd be happy to help you get a project quote! To provide an accurate estimate, I'll need some details:\n\n1. What type of project? (Web, Mobile, AI, etc.)\n2. Project scope and timeline\n3. Your budget range\n4. Any specific requirements\n\nShould I send you our detailed project form via email?",
 }
@@ -206,7 +206,7 @@ export default function Chatbot() {
               label: "Send Contact Info",
               data: { subject: "Contact Information", template: "contact_info" },
             },
-            { type: "call", label: "Call Now", data: { phone: "+92 (325) 3962130" } },
+            { type: "call", label: "Call Now", data: { phone: "+92 (311) 1715499" } },
           ]
         } else if (
           lowerMessage.includes("schedule") ||
@@ -251,7 +251,7 @@ export default function Chatbot() {
             {
               type: "email",
               label: "Company Brochure",
-              data: { subject: "Softkai Company Information", template: "brochure" },
+              data: { subject: "Abaidbutt Expereience information ", template: "brochure" },
             },
             {
               type: "email",
@@ -299,7 +299,7 @@ export default function Chatbot() {
         await handleEmailAction(action.data)
         break;
       case "call": {
-        const phone = state.context.phoneNumber || "+92 (325) 3962130"
+        const phone = state.context.phoneNumber || "+92 (311) 1715499"
 
         addBotMessage(
           `📞 You can reach us at:\n\n**${phone}**\n\nTapping the button below will start the call.`,
@@ -368,7 +368,7 @@ export default function Chatbot() {
     // 2. Add confirmation message
     setTimeout(() => {
       addBotMessage(
-        `📅 Your booking assistant is ready!\n\nUse the calendar popup to choose a time slot that fits your schedule.\n\n⏰ Duration: 30-60 min\n👥 Attendees: You + Softkai Expert\n📍 Format: Video or Phone\n\nIf you close the popup, you can also use the link below.`,
+        `📅 Your booking assistant is ready!\n\nUse the calendar popup to choose a time slot that fits your schedule.\n\n⏰ Duration: 30-60 min\n👥 Attendees: You + Expert\n📍 Format: Video or Phone\n\nIf you close the popup, you can also use the link below.`,
         {
           actions: [
             {
@@ -483,7 +483,7 @@ export default function Chatbot() {
               <Bot className="w-6 h-6 text-black" />
             </div>
             <div>
-              <h3 className="text-white font-semibold">KaiBot AI</h3>
+              <h3 className="text-white font-semibold">Abaid AI</h3>
               <div className="flex items-center space-x-1">
                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                 <span className="text-xs text-gray-400">Online</span>
@@ -511,8 +511,8 @@ export default function Chatbot() {
 
               <div className="text-center py-8">
                 <Sparkles className="w-12 h-12 text-[#0f2658] mx-auto mb-4" />
-                <h4 className="text-white font-medium mb-2">Welcome to KaiBot AI!</h4>
-                <p className="text-gray-400 text-sm">I'm here to help you with Softkai services and inquiries.</p>
+                <h4 className="text-white font-medium mb-2">Welcome to Abaid AI!</h4>
+                <p className="text-gray-400 text-sm">I'm here to help you with Abaidbutt services and inquiries.</p>
               </div>
 
               <input
@@ -671,7 +671,7 @@ export default function Chatbot() {
                       value={state.currentInput}
                       onChange={(e) => setState((prev) => ({ ...prev, currentInput: e.target.value }))}
                       // onKeyPress={(e) => e.key === "Enter" && handleSendMessage()}
-                      placeholder="Ask me anything about Softkai..."
+                      placeholder="Ask me anything about my Experience..."
                       className="bg-gray-700 border-white border-2 text-white placeholder-gray-400 text-sm p-2 flex-1 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3283ca] transition-all duration-200"
                       disabled={state.isTyping}
                     />
@@ -684,7 +684,7 @@ export default function Chatbot() {
                     </button>
                   </div>
 
-                  <div className="mt-2 text-xs text-gray-500 text-center">Powered by KaiBot AI • Secure & Private</div>
+                  <div className="mt-2 text-xs text-gray-500 text-center">Powered by Abaid AI • Secure & Private</div>
                 </div>}
 
               </>
