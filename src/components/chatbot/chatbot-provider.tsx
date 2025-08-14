@@ -27,7 +27,7 @@ interface ChatbotProviderProps {
 
 export function ChatbotProvider({ children, enabled = true }: ChatbotProviderProps) {
   const [isEnabled, setIsEnabled] = useState(enabled)
-
+  console.log(isEnabled, "isEnabled in ChatbotProvider")
   const toggleChatbot = () => {
     setIsEnabled((prev) => !prev)
   }
@@ -41,7 +41,15 @@ export function ChatbotProvider({ children, enabled = true }: ChatbotProviderPro
   return (
     <ChatbotContext.Provider value={{ isEnabled, toggleChatbot, sendMessage }}>
       {children}
-      {isEnabled && <Chatbot />}
+      {/* {isEnabled && <Chatbot  />} */}
     </ChatbotContext.Provider>
   )
+}
+
+export const useChatbotContext = () => {
+  const context = useContext(ChatbotContext)
+  if (!context) {
+    throw new Error("useChatbotContext must be used within a ChatbotProvider")
+  }
+  return context
 }

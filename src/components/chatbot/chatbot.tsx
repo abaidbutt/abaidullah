@@ -90,7 +90,7 @@ const predefinedResponses = {
 
 export default function Chatbot() {
   const [state, setState] = useState<ChatbotState>({
-    isOpen: false,
+    isOpen: true,
     isMinimized: false,
     messages: [],
     isTyping: false,
@@ -277,7 +277,7 @@ export default function Chatbot() {
     ) // Realistic typing delay
   }
   const generalReponse = async (updatedMessages: any) => {
-    const reply = await axios.post("/api/chat-bot", updatedMessages).then((res: any) => res.data)
+    const reply = await axios.post("https://softkai.vercel.app/api/chat-bot", updatedMessages).then((res: any) => res.data)
     return reply
   }
 
@@ -341,7 +341,7 @@ export default function Chatbot() {
     setState((prev) => ({ ...prev, isTyping: true }))
 
     try {
-      await axios.post("/api/send-email", {
+      await axios.post("https://softkai.vercel.app/api/send-email", {
         to: userEmail,
         subject: emailData.subject,
         body: `Here is the information you requested: ${emailData.template || "No template content."}`,
@@ -471,15 +471,15 @@ export default function Chatbot() {
   }
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div >
       <section
-        className={`bg-gray-900/95 backdrop-blur-md border border-white border-2 rounded-xl  shadow-2xl transition-all duration-300 ${state.isMinimized ? "w-80 h-auto" : "w-96 h-[600px] "
+        className={`bg-gray-900/95 backdrop-blur-md border border-white border-2 rounded-xl  shadow-2xl transition-all duration-300 ${state.isMinimized ? "w-auto h-auto" : "w-auto h-[600px] "
           }`}
       >
         {/* Header */}
         <div className="flex items-center justify-between p-4 border-b border-white/10">
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-[#3283ca] rounded-full flex items-center justify-center">
+            <div className="w-10 h-10 bg-[#fff] rounded-full flex items-center justify-center">
               <Bot className="w-6 h-6 text-black" />
             </div>
             <div>

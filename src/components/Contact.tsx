@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaGithub } from 'react-icons/fa';
 import { TbClockHour4 } from "react-icons/tb";
+import Chatbot from './chatbot/chatbot';
+import { useChatbotContext } from './chatbot/chatbot-provider';
 
 const Contact: React.FC = () => {
+  const state = useChatbotContext()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -35,6 +38,7 @@ const Contact: React.FC = () => {
     window.location.href = mailToLink;
   };
 
+
   return (
     <section id="contact" className="py-20 dark:bg-gray-800 dark:text-gray-100 bg-white text-gray-900 relative overflow-hidden">
       <div className="container mx-auto px-4">
@@ -44,7 +48,7 @@ const Contact: React.FC = () => {
             Contact me today to schedule a consultation and discuss your project needs
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="flex flex-col justify-center space-y-8">
             <div className="flex items-center space-x-4">
@@ -80,9 +84,11 @@ const Contact: React.FC = () => {
               <span className="text-lg">Monday - Friday | 12pm - 2am</span>
             </div>
           </div>
-          
+
           <div className="">
-            <form onSubmit={handleSubmit} className="space-y-6 bg-gray-50 dark:bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 transform transition duration-300 hover:shadow-xl">
+            {true && <Chatbot />}
+
+            {/* <form onSubmit={handleSubmit} className="space-y-6 bg-gray-50 dark:bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 transform transition duration-300 hover:shadow-xl">
               <div>
                 <label className="block text-sm font-semibold mb-2 text-gray-700 dark:text-gray-300">Name</label>
                 <input 
@@ -122,7 +128,7 @@ const Contact: React.FC = () => {
               >
                 Get Started
               </button>
-            </form>
+            </form> */}
           </div>
         </div>
       </div>
