@@ -353,6 +353,7 @@ export default function Chatbot() {
           actions: [{ type: "email", label: "Send Another", data: { subject: "Follow-up Information" } }],
         }
       )
+      
     } catch (error) {
       console.error("Email error", error)
       addBotMessage(`❌ Failed to send email. Please try again later.`)

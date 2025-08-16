@@ -1,42 +1,42 @@
-import React, { useEffect, useState } from 'react';
+// import React, { useEffect, useState } from 'react';
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaGithub } from 'react-icons/fa';
 import { TbClockHour4 } from "react-icons/tb";
 import Chatbot from './chatbot/chatbot';
-import { useChatbotContext } from './chatbot/chatbot-provider';
+// import { useChatbotContext } from './chatbot/chatbot-provider';
 
 const Contact: React.FC = () => {
-  const state = useChatbotContext()
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
+  // const state = useChatbotContext()
+  // const [formData, setFormData] = useState({
+  //   name: '',
+  //   email: '',
+  //   message: ''
+  // });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prevState => ({
-      ...prevState,
-      [name]: value
-    }));
-  };
+  // const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  //   const { name, value } = e.target;
+  //   setFormData(prevState => ({
+  //     ...prevState,
+  //     [name]: value
+  //   }));
+  // };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  // const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  //   e.preventDefault();
 
-    // Basic validation
-    if (formData.name.trim() === '' || formData.email.trim() === '' || formData.message.trim() === '') {
-      alert('Please fill in all fields.');
-      return;
-    }
+  //   // Basic validation
+  //   if (formData.name.trim() === '' || formData.email.trim() === '' || formData.message.trim() === '') {
+  //     alert('Please fill in all fields.');
+  //     return;
+  //   }
 
-    // Assuming all fields are valid, construct the mailto link
-    const subject = 'Message from Contact Form';
-    const body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0AMessage: ${formData.message}`;
-    const mailToLink = `mailto:bestabaidullahbutt@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  //   // Assuming all fields are valid, construct the mailto link
+  //   const subject = 'Message from Contact Form';
+  //   const body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0AMessage: ${formData.message}`;
+  //   const mailToLink = `mailto:bestabaidullahbutt@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-    // Redirect to mail client
-    window.location.href = mailToLink;
-  };
+  //   // Redirect to mail client
+  //   window.location.href = mailToLink;
+  // };
 
 
   return (
